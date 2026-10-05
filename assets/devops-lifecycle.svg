@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="100%" height="100%">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#05101a" />
@@ -6,20 +6,20 @@
     </linearGradient>
 
     <linearGradient id="loopGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="0%" stop-color="#00FF9D" />
       <stop offset="25%" stop-color="#06B6D4" />
       <stop offset="50%" stop-color="#3B82F6" />
       <stop offset="75%" stop-color="#8B5CF6" />
-      <stop offset="100%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#00FF9D" />
     </linearGradient>
 
     <filter id="nodeGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feGaussianBlur stdDeviation="5" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
-    <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0f2636" stroke-width="0.5" />
+    <pattern id="smallGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#0f2636" stroke-width="0.75" />
     </pattern>
   </defs>
 
@@ -29,15 +29,15 @@
       100% { stroke-dashoffset: -800; }
     }
     @keyframes pulseCore {
-      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px #10b981); }
-      50% { transform: scale(1.08); filter: drop-shadow(0 0 14px #06b6d4); }
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px #00ff9d); }
+      50% { transform: scale(1.1); filter: drop-shadow(0 0 18px #06b6d4); }
     }
     .flow-stream {
-      stroke-dasharray: 12 18;
-      animation: loopFlow 16s linear infinite;
+      stroke-dasharray: 14 20;
+      animation: loopFlow 14s linear infinite;
     }
     .core-pulse {
-      transform-origin: 600px 260px;
+      transform-origin: 600px 285px;
       animation: pulseCore 4s ease-in-out infinite;
     }
     .font-code { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
@@ -45,107 +45,101 @@
   </style>
 
   <!-- Container Box -->
-  <rect width="1200" height="520" rx="16" fill="url(#cardBg)" stroke="#163347" stroke-width="1.5" />
-  <rect width="1200" height="520" fill="url(#smallGrid)" opacity="0.6" />
+  <rect width="1200" height="560" rx="18" fill="url(#cardBg)" stroke="#163347" stroke-width="2" />
+  <rect width="1200" height="560" fill="url(#smallGrid)" opacity="0.6" />
 
   <!-- Top Title Banner -->
-  <g transform="translate(40, 36)">
-    <text x="0" y="0" fill="#10B981" class="font-code" font-size="12" font-weight="700" letter-spacing="2">DEV-OPS CONTINUOUS LIFECYCLE</text>
-    <text x="0" y="24" fill="#F8FAFC" class="font-ui" font-size="20" font-weight="800">The Modern Cloud-Native Delivery Loop</text>
-    <text x="0" y="44" fill="#94A3B8" class="font-ui" font-size="12">Iterative, automated, and observable loop connecting Development, Operations, and Security</text>
+  <g transform="translate(45, 40)">
+    <text x="0" y="0" fill="#00FF9D" class="font-code" font-size="13" font-weight="800" letter-spacing="2">01 // CONTINUOUS LIFECYCLE &amp; FEEDBACK LOOP</text>
+    <text x="0" y="28" fill="#F8FAFC" class="font-ui" font-size="22" font-weight="900">The Modern Cloud-Native Delivery Loop</text>
+    <text x="0" y="52" fill="#94A3B8" class="font-ui" font-size="14">Iterative, automated, and observable loop connecting Development, Operations, and Security</text>
   </g>
 
   <!-- Main Infinity Loop Track -->
-  <!-- Left Loop: Dev (Plan -> Code -> Build -> Test) -->
-  <!-- Center Intersection: Release & Deploy -->
-  <!-- Right Loop: Ops (Deploy -> Operate -> Monitor -> Secure & Feedback) -->
+  <path d="M 600 285 C 470 120, 200 120, 200 285 C 200 450, 470 450, 600 285 C 730 120, 1000 120, 1000 285 C 1000 450, 730 450, 600 285 Z"
+        fill="none" stroke="#0e2a3c" stroke-width="32" stroke-linecap="round" />
 
-  <!-- Outer Glow Track -->
-  <path d="M 600 260 C 470 110, 200 110, 200 260 C 200 410, 470 410, 600 260 C 730 110, 1000 110, 1000 260 C 1000 410, 730 410, 600 260 Z"
-        fill="none" stroke="#0e2a3c" stroke-width="26" stroke-linecap="round" />
-
-  <!-- Animated Active Gradient Flow Line -->
-  <path d="M 600 260 C 470 110, 200 110, 200 260 C 200 410, 470 410, 600 260 C 730 110, 1000 110, 1000 260 C 1000 410, 730 410, 600 260 Z"
-        fill="none" stroke="url(#loopGradient)" stroke-width="6" class="flow-stream" stroke-linecap="round" filter="url(#nodeGlow)" />
+  <path d="M 600 285 C 470 120, 200 120, 200 285 C 200 450, 470 450, 600 285 C 730 120, 1000 120, 1000 285 C 1000 450, 730 450, 600 285 Z"
+        fill="none" stroke="url(#loopGradient)" stroke-width="8" class="flow-stream" stroke-linecap="round" filter="url(#nodeGlow)" />
 
   <!-- Center Hub: Continuous Integration & Delivery -->
   <g class="core-pulse">
-    <circle cx="600" cy="260" r="32" fill="#061f2d" stroke="#10B981" stroke-width="2" />
-    <circle cx="600" cy="260" r="16" fill="#10B981" opacity="0.3" />
-    <text x="600" y="258" fill="#FFFFFF" class="font-code" font-size="10" font-weight="800" text-anchor="middle">CI / CD</text>
-    <text x="600" y="271" fill="#00FF9D" class="font-code" font-size="8.5" font-weight="700" text-anchor="middle">GITOPS</text>
+    <circle cx="600" cy="285" r="38" fill="#061f2d" stroke="#00FF9D" stroke-width="2.5" />
+    <circle cx="600" cy="285" r="20" fill="#00FF9D" opacity="0.3" />
+    <text x="600" y="281" fill="#FFFFFF" class="font-code" font-size="12" font-weight="800" text-anchor="middle">CI / CD</text>
+    <text x="600" y="297" fill="#00FF9D" class="font-code" font-size="10.5" font-weight="800" text-anchor="middle">GITOPS</text>
   </g>
 
-  <!-- STAGE NODES & BADGES -->
+  <!-- STAGE NODES & BADGES (Enlarged for Mobile Legibility) -->
 
-  <!-- STAGE 1: PLAN (Top-Left) -->
-  <g transform="translate(340, 140)">
-    <rect x="-65" y="-22" width="130" height="44" rx="10" fill="#071b26" stroke="#10b981" stroke-width="1.2" />
-    <circle cx="-45" cy="0" r="6" fill="#10b981" />
-    <text x="-32" y="-3" fill="#ffffff" class="font-ui" font-size="12" font-weight="700">01. PLAN</text>
-    <text x="-32" y="11" fill="#94a3b8" class="font-code" font-size="9">Jira • Linear • ADR</text>
+  <!-- STAGE 1: PLAN -->
+  <g transform="translate(340, 150)">
+    <rect x="-80" y="-26" width="160" height="52" rx="12" fill="#071b26" stroke="#00FF9D" stroke-width="1.8" />
+    <circle cx="-56" cy="0" r="7" fill="#00FF9D" />
+    <text x="-42" y="-3" fill="#ffffff" class="font-ui" font-size="14" font-weight="800">01. PLAN</text>
+    <text x="-42" y="14" fill="#6EE7B7" class="font-code" font-size="11" font-weight="600">Jira • Linear • ADR</text>
   </g>
 
-  <!-- STAGE 2: CODE (Far-Left) -->
-  <g transform="translate(170, 260)">
-    <rect x="-65" y="-22" width="130" height="44" rx="10" fill="#071b26" stroke="#06b6d4" stroke-width="1.2" />
-    <circle cx="-45" cy="0" r="6" fill="#06b6d4" />
-    <text x="-32" y="-3" fill="#ffffff" class="font-ui" font-size="12" font-weight="700">02. CODE</text>
-    <text x="-32" y="11" fill="#94a3b8" class="font-code" font-size="9">Git • Trunk • VSCode</text>
+  <!-- STAGE 2: CODE -->
+  <g transform="translate(160, 285)">
+    <rect x="-80" y="-26" width="160" height="52" rx="12" fill="#071b26" stroke="#06b6d4" stroke-width="1.8" />
+    <circle cx="-56" cy="0" r="7" fill="#06b6d4" />
+    <text x="-42" y="-3" fill="#ffffff" class="font-ui" font-size="14" font-weight="800">02. CODE</text>
+    <text x="-42" y="14" fill="#7DD3FC" class="font-code" font-size="11" font-weight="600">Git • Trunk • VSCode</text>
   </g>
 
-  <!-- STAGE 3: BUILD (Bottom-Left) -->
-  <g transform="translate(340, 380)">
-    <rect x="-65" y="-22" width="130" height="44" rx="10" fill="#071b26" stroke="#06b6d4" stroke-width="1.2" />
-    <circle cx="-45" cy="0" r="6" fill="#06b6d4" />
-    <text x="-32" y="-3" fill="#ffffff" class="font-ui" font-size="12" font-weight="700">03. BUILD</text>
-    <text x="-32" y="11" fill="#94a3b8" class="font-code" font-size="9">Docker • Buildx • OCI</text>
+  <!-- STAGE 3: BUILD -->
+  <g transform="translate(340, 420)">
+    <rect x="-80" y="-26" width="160" height="52" rx="12" fill="#071b26" stroke="#06b6d4" stroke-width="1.8" />
+    <circle cx="-56" cy="0" r="7" fill="#06b6d4" />
+    <text x="-42" y="-3" fill="#ffffff" class="font-ui" font-size="14" font-weight="800">03. BUILD</text>
+    <text x="-42" y="14" fill="#7DD3FC" class="font-code" font-size="11" font-weight="600">Docker • Buildx • OCI</text>
   </g>
 
-  <!-- STAGE 4: TEST & SCAN (Center-Left) -->
-  <g transform="translate(480, 310)">
-    <rect x="-60" y="-18" width="120" height="36" rx="8" fill="#071b26" stroke="#3b82f6" stroke-width="1" />
-    <circle cx="-42" cy="0" r="5" fill="#3b82f6" />
-    <text x="-30" y="-2" fill="#ffffff" class="font-ui" font-size="11" font-weight="700">04. TEST</text>
-    <text x="-30" y="10" fill="#94a3b8" class="font-code" font-size="8.5">PyTest • Trivy</text>
+  <!-- STAGE 4: TEST & SCAN -->
+  <g transform="translate(480, 345)">
+    <rect x="-70" y="-22" width="140" height="44" rx="10" fill="#071b26" stroke="#3b82f6" stroke-width="1.5" />
+    <circle cx="-48" cy="0" r="6" fill="#3b82f6" />
+    <text x="-34" y="-2" fill="#ffffff" class="font-ui" font-size="13" font-weight="800">04. TEST</text>
+    <text x="-34" y="13" fill="#93C5FD" class="font-code" font-size="10.5" font-weight="600">PyTest • Trivy</text>
   </g>
 
-  <!-- STAGE 5: RELEASE (Center-Right) -->
-  <g transform="translate(720, 210)">
-    <rect x="-60" y="-18" width="120" height="36" rx="8" fill="#071b26" stroke="#3b82f6" stroke-width="1" />
-    <circle cx="-42" cy="0" r="5" fill="#3b82f6" />
-    <text x="-30" y="-2" fill="#ffffff" class="font-ui" font-size="11" font-weight="700">05. RELEASE</text>
-    <text x="-30" y="10" fill="#94a3b8" class="font-code" font-size="8.5">Cosign • Helm</text>
+  <!-- STAGE 5: RELEASE -->
+  <g transform="translate(720, 225)">
+    <rect x="-70" y="-22" width="140" height="44" rx="10" fill="#071b26" stroke="#3b82f6" stroke-width="1.5" />
+    <circle cx="-48" cy="0" r="6" fill="#3b82f6" />
+    <text x="-34" y="-2" fill="#ffffff" class="font-ui" font-size="13" font-weight="800">05. RELEASE</text>
+    <text x="-34" y="13" fill="#93C5FD" class="font-code" font-size="10.5" font-weight="600">Cosign • Helm</text>
   </g>
 
-  <!-- STAGE 6: DEPLOY (Top-Right) -->
-  <g transform="translate(860, 140)">
-    <rect x="-65" y="-22" width="130" height="44" rx="10" fill="#071b26" stroke="#8b5cf6" stroke-width="1.2" />
-    <circle cx="-45" cy="0" r="6" fill="#8b5cf6" />
-    <text x="-32" y="-3" fill="#ffffff" class="font-ui" font-size="12" font-weight="700">06. DEPLOY</text>
-    <text x="-32" y="11" fill="#94a3b8" class="font-code" font-size="9">ArgoCD • Flagger</text>
+  <!-- STAGE 6: DEPLOY -->
+  <g transform="translate(860, 150)">
+    <rect x="-80" y="-26" width="160" height="52" rx="12" fill="#071b26" stroke="#8b5cf6" stroke-width="1.8" />
+    <circle cx="-56" cy="0" r="7" fill="#8b5cf6" />
+    <text x="-42" y="-3" fill="#ffffff" class="font-ui" font-size="14" font-weight="800">06. DEPLOY</text>
+    <text x="-42" y="14" fill="#DDD6FE" class="font-code" font-size="11" font-weight="600">ArgoCD • Rollouts</text>
   </g>
 
-  <!-- STAGE 7: OPERATE (Far-Right) -->
-  <g transform="translate(1030, 260)">
-    <rect x="-65" y="-22" width="130" height="44" rx="10" fill="#071b26" stroke="#ec4899" stroke-width="1.2" />
-    <circle cx="-45" cy="0" r="6" fill="#ec4899" />
-    <text x="-32" y="-3" fill="#ffffff" class="font-ui" font-size="12" font-weight="700">07. OPERATE</text>
-    <text x="-32" y="11" fill="#94a3b8" class="font-code" font-size="9">K8s • Istio • Cilium</text>
+  <!-- STAGE 7: OPERATE -->
+  <g transform="translate(1040, 285)">
+    <rect x="-80" y="-26" width="160" height="52" rx="12" fill="#071b26" stroke="#ec4899" stroke-width="1.8" />
+    <circle cx="-56" cy="0" r="7" fill="#ec4899" />
+    <text x="-42" y="-3" fill="#ffffff" class="font-ui" font-size="14" font-weight="800">07. OPERATE</text>
+    <text x="-42" y="14" fill="#F472B6" class="font-code" font-size="11" font-weight="600">K8s • Istio • Cilium</text>
   </g>
 
-  <!-- STAGE 8: MONITOR (Bottom-Right) -->
-  <g transform="translate(860, 380)">
-    <rect x="-65" y="-22" width="130" height="44" rx="10" fill="#071b26" stroke="#f59e0b" stroke-width="1.2" />
-    <circle cx="-45" cy="0" r="6" fill="#f59e0b" />
-    <text x="-32" y="-3" fill="#ffffff" class="font-ui" font-size="12" font-weight="700">08. OBSERVE</text>
-    <text x="-32" y="11" fill="#94a3b8" class="font-code" font-size="9">OTel • Grafana • SLO</text>
+  <!-- STAGE 8: MONITOR -->
+  <g transform="translate(860, 420)">
+    <rect x="-80" y="-26" width="160" height="52" rx="12" fill="#071b26" stroke="#f59e0b" stroke-width="1.8" />
+    <circle cx="-56" cy="0" r="7" fill="#f59e0b" />
+    <text x="-42" y="-3" fill="#ffffff" class="font-ui" font-size="14" font-weight="800">08. OBSERVE</text>
+    <text x="-42" y="14" fill="#FDE68A" class="font-code" font-size="11" font-weight="600">OTel • Grafana • SLO</text>
   </g>
 
   <!-- Bottom Badges Strip -->
-  <g transform="translate(60, 475)">
-    <rect x="0" y="0" width="1080" height="26" rx="6" fill="#040c14" stroke="#132a3e" stroke-width="0.8" />
-    <text x="20" y="17" fill="#10B981" class="font-code" font-size="10.5" font-weight="700">SHIFT-LEFT SECURITY:</text>
-    <text x="180" y="17" fill="#94A3B8" class="font-code" font-size="10">SAST • Secret Scanning • Policy-as-Code (Kyverno) • SBOM Attestation • Chaos Engineering</text>
+  <g transform="translate(45, 505)">
+    <rect x="0" y="0" width="1110" height="34" rx="8" fill="#040c14" stroke="#132a3e" stroke-width="1" />
+    <text x="24" y="22" fill="#00FF9D" class="font-code" font-size="12" font-weight="800">SHIFT-LEFT SECURITY:</text>
+    <text x="210" y="22" fill="#94A3B8" class="font-code" font-size="12" font-weight="600">SAST • Secret Scanning • Policy-as-Code (Kyverno) • SBOM Attestation • Chaos Testing</text>
   </g>
 </svg>
