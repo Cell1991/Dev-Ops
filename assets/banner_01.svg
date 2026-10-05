@@ -28,8 +28,8 @@
 
   <!-- Title & Subtitle -->
   <g transform="translate(155, 26)">
-    <text x="0" y="18" fill="#FFFFFF" class="sans" font-size="16.5" font-weight="800" letter-spacing="0.5">CONTINUOUS LIFECYCLE & DELIVERY LOOP</text>
-    <text x="0" y="42" fill="#94A3B8" class="sans" font-size="12">Automated, observable, and secure iterative feedback loop across Dev & Ops</text>
+    <text x="0" y="18" fill="#FFFFFF" class="sans" font-size="16.5" font-weight="800" letter-spacing="0.5">CONTINUOUS LIFECYCLE &amp; DELIVERY LOOP</text>
+    <text x="0" y="42" fill="#94A3B8" class="sans" font-size="12">Automated, observable, and secure iterative feedback loop across Dev &amp; Ops</text>
   </g>
 
   <!-- Right Status Chip -->

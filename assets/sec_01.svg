@@ -28,7 +28,7 @@
 
   <!-- Title & Subtitle -->
   <g transform="translate(130, 26)">
-    <text x="0" y="18" fill="#FFFFFF" class="sans" font-size="17" font-weight="800" letter-spacing="0.5">CONTAINERIZATION & RUNTIMES</text>
+    <text x="0" y="18" fill="#FFFFFF" class="sans" font-size="17" font-weight="800" letter-spacing="0.5">CONTAINERIZATION &amp; RUNTIMES</text>
     <text x="0" y="42" fill="#94A3B8" class="sans" font-size="12">OCI specs, multi-stage builds, rootless containers, distroless, and containerd</text>
   </g>
 

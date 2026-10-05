@@ -28,7 +28,7 @@
 
   <!-- Title & Subtitle -->
   <g transform="translate(130, 26)">
-    <text x="0" y="18" fill="#FFFFFF" class="sans" font-size="17" font-weight="800" letter-spacing="0.5">PLATFORM ENGINEERING & IDP</text>
+    <text x="0" y="18" fill="#FFFFFF" class="sans" font-size="17" font-weight="800" letter-spacing="0.5">PLATFORM ENGINEERING &amp; IDP</text>
     <text x="0" y="42" fill="#94A3B8" class="sans" font-size="12">Internal Developer Platforms, Backstage catalogs, ephemeral envs, and golden paths</text>
   </g>
 

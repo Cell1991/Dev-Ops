@@ -28,7 +28,7 @@
 
   <!-- Title & Subtitle -->
   <g transform="translate(155, 26)">
-    <text x="0" y="18" fill="#FFFFFF" class="sans" font-size="16.5" font-weight="800" letter-spacing="0.5">CORE ARCHITECTURAL PILLARS & CAPABILITIES</text>
+    <text x="0" y="18" fill="#FFFFFF" class="sans" font-size="16.5" font-weight="800" letter-spacing="0.5">CORE ARCHITECTURAL PILLARS &amp; CAPABILITIES</text>
     <text x="0" y="42" fill="#94A3B8" class="sans" font-size="12">Foundational engineering paradigms powering resilient, hyper-scale cloud native platforms</text>
   </g>
 

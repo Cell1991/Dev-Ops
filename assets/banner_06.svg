@@ -28,7 +28,7 @@
 
   <!-- Title & Subtitle -->
   <g transform="translate(155, 26)">
-    <text x="0" y="18" fill="#FFFFFF" class="sans" font-size="16.5" font-weight="800" letter-spacing="0.5">MONOREPO ARCHITECTURE & CODE TREE</text>
+    <text x="0" y="18" fill="#FFFFFF" class="sans" font-size="16.5" font-weight="800" letter-spacing="0.5">MONOREPO ARCHITECTURE &amp; CODE TREE</text>
     <text x="0" y="42" fill="#94A3B8" class="sans" font-size="12">Structured production layout separating documentation, live manifests, and automation scripts</text>
   </g>
 
