@@ -37,28 +37,28 @@
 
   <!-- TACTICAL NAVIGATION RADAR & SITEMAP MATRIX -->
   <p align="center">
-    <a href="#01-devops-continuous-lifecycle">
+    <a href="#01-continuous-lifecycle--delivery-loop">
       <img src="https://img.shields.io/badge/01_LIFECYCLE-Continuous_Loop-10B981?style=flat-square&logo=loop&logoColor=white" alt="Lifecycle" />
     </a>
-    <a href="#02-bento-matrix--architectural-pillars">
-      <img src="https://img.shields.io/badge/02_BENTO_GRID-Architectural_Pillars-06B6D4?style=flat-square&logo=grid&logoColor=white" alt="Bento Grid" />
+    <a href="#02-core-architectural-pillars--capabilities">
+      <img src="https://img.shields.io/badge/02_PILLARS-Architecture_Matrix-06B6D4?style=flat-square&logo=blueprint&logoColor=white" alt="Architecture Pillars" />
     </a>
-    <a href="#03-taxonomic-tech-radar--landscape">
+    <a href="#03-taxonomic-technology-radar--stack">
       <img src="https://img.shields.io/badge/03_TECH_RADAR-Taxonomic_Matrix-3B82F6?style=flat-square&logo=radar&logoColor=white" alt="Tech Radar" />
     </a>
-    <a href="#04-end-to-end-gitops--security-pipeline">
+    <a href="#04-enterprise-gitops--supply-chain-pipeline">
       <img src="https://img.shields.io/badge/04_PIPELINE-End_to_End_Flow-8B5CF6?style=flat-square&logo=githubactions&logoColor=white" alt="Pipeline" />
     </a>
   </p>
 
   <p align="center">
-    <a href="#05-comprehensive-curriculum-catalogue">
+    <a href="#05-comprehensive-curriculum-vault-12-tracks">
       <img src="https://img.shields.io/badge/05_CURRICULUM-Exhaustive_Tracks-EC4899?style=flat-square&logo=readme&logoColor=white" alt="Curriculum Tracks" />
     </a>
-    <a href="#06-repository-architecture--code-tree">
+    <a href="#06-monorepo-architecture--code-tree">
       <img src="https://img.shields.io/badge/06_CODE_TREE-Monorepo_Layout-F59E0B?style=flat-square&logo=files&logoColor=white" alt="Code Tree" />
     </a>
-    <a href="#07-production-quick-start--manifests">
+    <a href="#07-production-quick-start--cli-workflows">
       <img src="https://img.shields.io/badge/07_QUICK_START-Deploy_&_Validate-EF4444?style=flat-square&logo=terminal&logoColor=white" alt="Quick Start" />
     </a>
   </p>
@@ -68,11 +68,11 @@
 ---
 
 <!-- ========================================================================================= -->
-<!--                    01. DEVOPS CONTINUOUS LIFECYCLE                                        -->
+<!--                    01. CONTINUOUS LIFECYCLE & DELIVERY LOOP                               -->
 <!-- ========================================================================================= -->
 
 <div align="center">
-  <img src="./assets/sec_00.svg" width="100%" alt="01 // DevOps Continuous Lifecycle" id="01-devops-continuous-lifecycle" />
+  <img src="./assets/banner_01.svg" width="100%" alt="01 // Continuous Lifecycle & Delivery Loop" id="01-continuous-lifecycle--delivery-loop" />
   <br/><br/>
   <img src="./assets/devops-lifecycle.svg" alt="DevOps Continuous Lifecycle Infinity Loop" width="100%" />
 </div>
@@ -95,13 +95,13 @@
 ---
 
 <!-- ========================================================================================= -->
-<!--                    02. BENTO MATRIX & ARCHITECTURAL PILLARS                               -->
+<!--                    02. CORE ARCHITECTURAL PILLARS & CAPABILITIES                          -->
 <!-- ========================================================================================= -->
 
 <div align="center">
-  <img src="./assets/sec_01.svg" width="100%" alt="02 // Bento Grid Feature Highlights" id="02-bento-matrix--architectural-pillars" />
+  <img src="./assets/banner_02.svg" width="100%" alt="02 // Core Architectural Pillars & Capabilities" id="02-core-architectural-pillars--capabilities" />
   <br/><br/>
-  <img src="./assets/bento-matrix.svg" alt="Bento Matrix Feature Highlights" width="100%" />
+  <img src="./assets/bento-matrix.svg" alt="Core Architectural Pillars Matrix" width="100%" />
 </div>
 
 <br/>
@@ -120,13 +120,13 @@
 ---
 
 <!-- ========================================================================================= -->
-<!--                    03. TAXONOMIC TECH RADAR & LANDSCAPE                                   -->
+<!--                    03. TAXONOMIC TECHNOLOGY RADAR & STACK                                 -->
 <!-- ========================================================================================= -->
 
 <div align="center">
-  <img src="./assets/sec_02.svg" width="100%" alt="03 // Taxonomic Tech Radar" id="03-taxonomic-tech-radar--landscape" />
+  <img src="./assets/banner_03.svg" width="100%" alt="03 // Taxonomic Technology Radar & Stack" id="03-taxonomic-technology-radar--stack" />
   <br/><br/>
-  <img src="./assets/tech-stack-matrix.svg" alt="DevOps Tech Radar Matrix" width="100%" />
+  <img src="./assets/tech-stack-matrix.svg" alt="DevOps Technology Radar Matrix" width="100%" />
 </div>
 
 <br/>
@@ -143,11 +143,11 @@
 ---
 
 <!-- ========================================================================================= -->
-<!--                    04. END-TO-END GITOPS & SECURITY PIPELINE                              -->
+<!--                    04. ENTERPRISE GITOPS & SUPPLY CHAIN PIPELINE                          -->
 <!-- ========================================================================================= -->
 
 <div align="center">
-  <img src="./assets/sec_03.svg" width="100%" alt="04 // End-to-End Pipeline" id="04-end-to-end-gitops--security-pipeline" />
+  <img src="./assets/banner_04.svg" width="100%" alt="04 // Enterprise GitOps & Supply Chain Pipeline" id="04-enterprise-gitops--supply-chain-pipeline" />
   <br/><br/>
   <img src="./assets/gitops-pipeline.svg" alt="GitOps End-to-End Flow" width="100%" />
 </div>
@@ -170,11 +170,11 @@ flowchart LR
 ---
 
 <!-- ========================================================================================= -->
-<!--                    05. COMPREHENSIVE CURRICULUM CATALOGUE                                 -->
+<!--                    05. COMPREHENSIVE CURRICULUM VAULT (12 TRACKS)                         -->
 <!-- ========================================================================================= -->
 
 <div align="center">
-  <img src="./assets/sec_04.svg" width="100%" alt="05 // Curriculum Tracks" id="05-comprehensive-curriculum-catalogue" />
+  <img src="./assets/banner_05.svg" width="100%" alt="05 // Comprehensive Curriculum Vault" id="05-comprehensive-curriculum-vault-12-tracks" />
 </div>
 
 <br/>
@@ -300,11 +300,11 @@ flowchart LR
 ---
 
 <!-- ========================================================================================= -->
-<!--                    06. REPOSITORY ARCHITECTURE & CODE TREE                                -->
+<!--                    06. MONOREPO ARCHITECTURE & CODE TREE                                  -->
 <!-- ========================================================================================= -->
 
 <div align="center">
-  <img src="./assets/sec_05.svg" width="100%" alt="06 // Monorepo Layout" id="06-repository-architecture--code-tree" />
+  <img src="./assets/banner_06.svg" width="100%" alt="06 // Monorepo Architecture & Code Tree" id="06-monorepo-architecture--code-tree" />
 </div>
 
 <br/>
@@ -314,10 +314,11 @@ Dev-Ops/
 ├── assets/                                     # High-Resolution Animated SVG Visuals
 │   ├── hero-banner.svg                         # Cyber-Titanium Animated Hero Banner
 │   ├── devops-lifecycle.svg                    # Interactive Continuous Delivery Infinity Loop
-│   ├── bento-matrix.svg                        # 6-Pillar Architectural Bento Grid
+│   ├── bento-matrix.svg                        # 6-Pillar Core Architectural Matrix
 │   ├── tech-stack-matrix.svg                   # Categorized Technology Radar Landscape
 │   ├── gitops-pipeline.svg                     # End-to-End Cryptographic Delivery Flow
-│   ├── sec_00.svg ... sec_11.svg               # Track Section Header Dividers
+│   ├── banner_01.svg ... banner_07.svg         # Clean Master Section Header Dividers
+│   ├── sec_00.svg ... sec_11.svg               # Individual Track Badges
 │   └── footer.svg                              # Monorepo Footer Banner
 ├── docs/                                       # In-Depth Theoretical & Architectural Guides
 │   ├── 00-foundations/                         # Linux Internals, Syscalls, cgroups & Git TBD
@@ -351,7 +352,7 @@ Dev-Ops/
 <!-- ========================================================================================= -->
 
 <div align="center">
-  <img src="./assets/sec_06.svg" width="100%" alt="07 // Quick Start" id="07-production-quick-start--manifests" />
+  <img src="./assets/banner_07.svg" width="100%" alt="07 // Production Quick Start & CLI Workflows" id="07-production-quick-start--cli-workflows" />
 </div>
 
 <br/>

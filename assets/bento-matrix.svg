@@ -54,8 +54,8 @@
 
   <!-- HEADER -->
   <g transform="translate(40, 36)">
-    <text x="0" y="0" fill="#10B981" class="font-code" font-size="12" font-weight="700" letter-spacing="2">02 // ARCHITECTURAL PILLARS</text>
-    <text x="0" y="26" fill="#F8FAFC" class="font-title" font-size="22">Modern DevOps &amp; Cloud Platform Bento Matrix</text>
+    <text x="0" y="0" fill="#10B981" class="font-code" font-size="12" font-weight="700" letter-spacing="2">02 // CORE ARCHITECTURAL PILLARS</text>
+    <text x="0" y="26" fill="#F8FAFC" class="font-title" font-size="22">Enterprise Platform Engineering &amp; Capabilities Matrix</text>
     <text x="0" y="46" fill="#94A3B8" class="font-body" font-size="12.5">Foundational capabilities powering resilient, hyper-scale cloud native engineering organizations</text>
   </g>
 
