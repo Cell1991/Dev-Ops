@@ -79,16 +79,16 @@
 
 <br/>
 
-| Stage | Core Mission | Modern Cloud-Native Tooling | Key Engineering Deliverables |
-| :--- | :--- | :--- | :--- |
-| **01. Plan** | Product requirements, ADRs, agile sprints | Jira, Linear, GitHub Projects | Architectural Decision Records (ADR), issue estimation |
-| **02. Code** | Trunk-based development, semantic commits | Git, VS Code, DevContainers | Branch protection rules, pre-commit gitleaks hooks |
-| **03. Build** | Deterministic, multi-stage OCI compilation | Docker Buildx, BuildKit, Kaniko | Non-root distroless images, layer cache mounts |
-| **04. Test** | Unit, integration, mutation & SAST tests | PyTest, Go Test, Semgrep, Trivy | SARIF security scan reports, Codecov > 85% |
-| **05. Release** | Cryptographic signing & SBOM attestation | Cosign (Sigstore), Syft, Helm OCI | SPDX SBOM, cryptographic provenance signature |
-| **06. Deploy** | Declarative GitOps reconciliation & Canary | ArgoCD, Argo Rollouts, Flagger | Instant rollback on 5xx spike, 0-downtime deployment |
-| **07. Operate** | Kernel-level networking, ingress & mesh | Kubernetes, Cilium eBPF, Istio | Gateway API routing, mTLS, L7 traffic management |
-| **08. Observe** | Distributed tracing, metrics & error budgets | OpenTelemetry, Prometheus, Tempo, Loki | Multi-burn-rate SLO alerts, unified trace dashboards |
+| Stage &amp; Focus | Ecosystem &amp; Key Deliverables |
+| :--- | :--- |
+| **01. Plan**<br/><sub>Product Requirements &amp; ADRs</sub> | `Jira` • `Linear` • `GitHub Projects`<br/>▸ Architectural Decision Records (ADR) &amp; sprint estimation |
+| **02. Code**<br/><sub>Trunk-Based Development</sub> | `Git` • `VS Code` • `DevContainers`<br/>▸ Branch protection rules &amp; Gitleaks pre-commit hooks |
+| **03. Build**<br/><sub>Deterministic Compilation</sub> | `Docker Buildx` • `BuildKit` • `Kaniko`<br/>▸ Non-root distroless images &amp; layer cache mounts |
+| **04. Test**<br/><sub>Continuous Verification</sub> | `PyTest` • `Go Test` • `Trivy` • `Semgrep`<br/>▸ SARIF security scan reports &amp; race condition tests |
+| **05. Release**<br/><sub>Supply Chain Attestation</sub> | `Cosign` • `Syft` • `Helm OCI`<br/>▸ SPDX SBOMs &amp; cryptographic provenance signatures |
+| **06. Deploy**<br/><sub>Progressive Delivery</sub> | `ArgoCD` • `Argo Rollouts` • `Flagger`<br/>▸ Automated canary analysis &amp; instant rollback on 5xx |
+| **07. Operate**<br/><sub>Kernel Mesh &amp; Routing</sub> | `Kubernetes` • `Cilium eBPF` • `Istio`<br/>▸ Gateway API routing &amp; zero-trust wire-speed mTLS |
+| **08. Observe**<br/><sub>High-Cardinality Telemetry</sub> | `OpenTelemetry` • `Prometheus` • `Tempo`<br/>▸ Multi-window SLO burn alerts &amp; trace dashboards |
 
 <br/>
 
@@ -106,14 +106,14 @@
 
 <br/>
 
-| Architectural Pillar | Core Theoretical Rationale | Industrial Impact &amp; Guarantees |
-| :--- | :--- | :--- |
-| **Platform Engineering &amp; IDP** | Treats developer infrastructure as an internal SaaS product with standardized Golden Paths. | Cuts time-to-production from weeks to $<15$ minutes while guaranteeing organizational compliance. |
-| **Declarative GitOps Engine** | Enforces Git as the immutable single source of truth with automated reconciliation loops. | Eliminates manual SSH mutations, eliminates configuration drift, and ensures instant disaster recovery. |
-| **eBPF-Powered Networking** | Bypasses legacy Linux `iptables` packet evaluation with kernel-level JIT bytecode programs. | Achieves $<0.2\text{ms}$ network overhead, line-speed L7 load balancing, and deep kernel security tracing. |
-| **Supply Chain Security (SLSA L3)** | Attests provenance, signs container layers keylessly, and blocks unverified images at admission. | Prevents solarwinds-style supply chain injections and verifies container integrity before cluster execution. |
-| **OpenTelemetry &amp; Error Budgets** | Adopts vendor-neutral telemetry data pipelines and aligns release velocity with reliability goals. | Reduces MTTD to $<90$ seconds and prevents catastrophic outages via multi-window error budget burn alerts. |
-| **Cloud FinOps &amp; Rightsizing** | Shifts cloud cost visibility left into developer Pull Requests and utilizes intelligent JIT node scaling. | Cuts organizational cloud waste by $35\%\text{--}45\%$ through Karpenter bin-packing and Infracost gates. |
+| Core Architectural Pillar | Operational Impact &amp; Production Guarantees |
+| :--- | :--- |
+| **Platform Engineering &amp; IDP**<br/><sub>Spotify Backstage • Score.dev</sub> | **&lt; 15 min Time-to-Production**<br/>Self-service developer portals &amp; standardized Golden Paths. |
+| **Declarative GitOps Engine**<br/><sub>ArgoCD • Flux v2</sub> | **0% Configuration Drift**<br/>Git single source of truth with automated continuous self-healing. |
+| **eBPF-Powered Networking**<br/><sub>Cilium CNI • Istio Ambient</sub> | **&lt; 0.2ms Network Latency**<br/>Bypasses iptables with kernel-level JIT packet evaluation. |
+| **Zero-Trust DevSecOps**<br/><sub>Kyverno • Cosign • SLSA L3</sub> | **Pre-Admission Security Gate**<br/>Cryptographic signing, SBOM attestation &amp; CVE scan blocks. |
+| **SRE &amp; OpenTelemetry**<br/><sub>OTel Collector • Prometheus</sub> | **&lt; 90s MTTD / &lt; 5m MTTR**<br/>Universal telemetry and multi-window SLO error budget burn alerts. |
+| **Cloud FinOps &amp; Governance**<br/><sub>Infracost • Kubecost • Karpenter</sub> | **~35-45% Cloud Waste Reduction**<br/>Shift-left PR cost estimates &amp; just-in-time intelligent node scaling. |
 
 <br/>
 
@@ -168,121 +168,121 @@
 
 <br/>
 
-### Track 00 // Foundations, Linux Internals & Git
+### Track 00 // Foundations, Linux Internals &amp; Git
 > Kernel isolation primitives, system calls, cgroups, process signals, defensive shell scripting, and Trunk-Based Development.
 
-| Module Guide | Core Concepts Covered | Code / Manifests |
-| :--- | :--- | :--- |
-| [`00. Linux Internals & Shell`](docs/00-foundations/linux-internals-and-shell.md) | Namespaces (`pid`, `net`, `mnt`), Cgroups v2 (`cpu.max`, `memory.max`), POSIX signals (`SIGTERM`, `SIGKILL`), strict shell scripts | [Bash Entrypoint Standard](docs/00-foundations/linux-internals-and-shell.md#3-high-performance-shell-scripting-standard) |
-| [`00. Git & Trunk-Based Dev`](docs/00-foundations/git-trunk-based-development.md) | Trunk-Based Development (TBD), Conventional Commits, Pre-commit security hooks, Git bisect | [Pre-commit YAML](docs/00-foundations/git-trunk-based-development.md#3-pre-commit-hook-security-configuration) |
+| Curriculum Module | Architecture &amp; Verified Manifests |
+| :--- | :--- |
+| 📖 [`00. Linux Internals & Shell`](docs/00-foundations/linux-internals-and-shell.md)<br/><sub>Kernel namespaces, cgroups v2, POSIX signals, strict bash</sub> | ⚡ [Production Entrypoint Script](docs/00-foundations/linux-internals-and-shell.md#3-high-performance-shell-scripting-standard) |
+| 📖 [`00. Git & Trunk-Based Dev`](docs/00-foundations/git-trunk-based-development.md)<br/><sub>Trunk-Based Development, Conventional Commits, Git bisect</sub> | ⚡ [Pre-Commit Security YAML](docs/00-foundations/git-trunk-based-development.md#3-pre-commit-hook-security-configuration) |
 
 <br/>
 
-### Track 01 // Containerization & Modern Runtimes
+### Track 01 // Containerization &amp; Modern Runtimes
 > OCI image architecture, BuildKit caching, non-root execution, distroless runtimes, and Linux capability stripping.
 
-| Module Guide | Core Concepts Covered | Code / Manifests |
-| :--- | :--- | :--- |
-| [`01. Modern Docker & OCI`](docs/01-containerization/modern-docker-and-oci.md) | Multi-stage builds, BuildKit `--mount=type=cache`, static binary compilation, OCI labels | [`Dockerfile.multistage`](examples/docker/Dockerfile.multistage) |
-| [`01. Container Security & Distroless`](docs/01-containerization/container-security-and-distroless.md) | Distroless Debian/Chainguard, dropping `CAP_ALL`, `readOnlyRootFilesystem`, Seccomp profiles | [`compose.production.yml`](examples/docker/compose.production.yml) |
+| Curriculum Module | Architecture &amp; Verified Manifests |
+| :--- | :--- |
+| 📖 [`01. Modern Docker & OCI`](docs/01-containerization/modern-docker-and-oci.md)<br/><sub>Multi-stage builds, BuildKit cache mounts, static binaries</sub> | ⚡ [`Dockerfile.multistage`](examples/docker/Dockerfile.multistage) |
+| 📖 [`01. Container Security & Distroless`](docs/01-containerization/container-security-and-distroless.md)<br/><sub>Distroless base, dropping CAP_ALL, readOnlyRootFilesystem</sub> | ⚡ [`compose.production.yml`](examples/docker/compose.production.yml) |
 
 <br/>
 
-### Track 02 // Infrastructure as Code (IaC) & Config Management
+### Track 02 // Infrastructure as Code (IaC) &amp; Config Management
 > Declarative cloud provisioning with Terraform / OpenTofu, remote S3 backends with DynamoDB locking, and Ansible automation.
 
-| Module Guide | Core Concepts Covered | Code / Manifests |
-| :--- | :--- | :--- |
-| [`02. Terraform & OpenTofu`](docs/02-infrastructure-as-code/terraform-and-opentofu.md) | State locking, module design, Terragrunt DRY architecture, automated drift detection | [`main.tf`](examples/terraform/main.tf), [`variables.tf`](examples/terraform/variables.tf) |
-| [`02. Ansible Configuration`](docs/02-infrastructure-as-code/ansible-and-configuration-management.md) | Idempotent node hardening, kernel sysctl tuning, containerd setup, Ansible Vault | [Node Hardening Playbook](docs/02-infrastructure-as-code/ansible-and-configuration-management.md#1-idempotency--role-based-architecture) |
+| Curriculum Module | Architecture &amp; Verified Manifests |
+| :--- | :--- |
+| 📖 [`02. Terraform & OpenTofu`](docs/02-infrastructure-as-code/terraform-and-opentofu.md)<br/><sub>State locking, module design, Terragrunt DRY architecture</sub> | ⚡ [`main.tf`](examples/terraform/main.tf) • [`variables.tf`](examples/terraform/variables.tf) |
+| 📖 [`02. Ansible Configuration`](docs/02-infrastructure-as-code/ansible-and-configuration-management.md)<br/><sub>Idempotent node hardening, kernel sysctl tuning, Ansible Vault</sub> | ⚡ [Node Hardening Playbook](docs/02-infrastructure-as-code/ansible-and-configuration-management.md#1-idempotency--role-based-architecture) |
 
 <br/>
 
-### Track 03 // Enterprise CI/CD & Progressive Delivery
+### Track 03 // Enterprise CI/CD &amp; Progressive Delivery
 > Keyless OIDC cloud authentication, Docker Buildx caching, ArgoCD GitOps reconciliation, and automated canary analysis.
 
-| Module Guide | Core Concepts Covered | Code / Manifests |
-| :--- | :--- | :--- |
-| [`03. GitHub Actions CI`](docs/03-cicd-and-gitops/github-actions-enterprise-pipelines.md) | OIDC Workload Identity, GitHub Actions cache, Trivy SARIF reporting, Matrix builds | [`production-pipeline.yml`](examples/cicd/.github/workflows/production-pipeline.yml) |
-| [`03. ArgoCD & Canary`](docs/03-cicd-and-gitops/argocd-and-progressive-delivery.md) | Continuous reconciliation loop, self-healing, Argo Rollouts canary traffic shifting | [`application.yaml`](examples/cicd/argocd/application.yaml) |
+| Curriculum Module | Architecture &amp; Verified Manifests |
+| :--- | :--- |
+| 📖 [`03. GitHub Actions CI`](docs/03-cicd-and-gitops/github-actions-enterprise-pipelines.md)<br/><sub>OIDC Workload Identity, GHA cache, Trivy SARIF reporting</sub> | ⚡ [`production-pipeline.yml`](examples/cicd/.github/workflows/production-pipeline.yml) |
+| 📖 [`03. ArgoCD & Canary`](docs/03-cicd-and-gitops/argocd-and-progressive-delivery.md)<br/><sub>Continuous reconciliation loop, self-healing, Argo Rollouts</sub> | ⚡ [`application.yaml`](examples/cicd/argocd/application.yaml) |
 
 <br/>
 
-### Track 04 // Kubernetes Orchestration & Cloud Native Ecosystem
+### Track 04 // Kubernetes Orchestration &amp; Cloud Native Ecosystem
 > Control plane architecture (etcd Raft, API Server, Scheduler), Pod lifecycle probes, PDBs, Helm, and K8s Gateway API.
 
-| Module Guide | Core Concepts Covered | Code / Manifests |
-| :--- | :--- | :--- |
-| [`04. K8s Architecture & Pods`](docs/04-kubernetes-ecosystem/k8s-architecture-and-pod-lifecycle.md) | etcd consensus, Kubelet CRI/CNI interaction, `startup/liveness/readiness` probes, PDB | [`base-deployment.yaml`](examples/kubernetes/base-deployment.yaml) |
-| [`04. Helm & Gateway API`](docs/04-kubernetes-ecosystem/helm-kustomize-gateway-api.md) | Helm 3 OCI packaging, Kustomize overlays, GatewayClass, Gateway, and HTTPRoute | [`gateway-api-route.yaml`](examples/kubernetes/gateway-api-route.yaml) |
+| Curriculum Module | Architecture &amp; Verified Manifests |
+| :--- | :--- |
+| 📖 [`04. K8s Architecture & Pods`](docs/04-kubernetes-ecosystem/k8s-architecture-and-pod-lifecycle.md)<br/><sub>etcd consensus, Kubelet CRI/CNI, startup/liveness probes, PDB</sub> | ⚡ [`base-deployment.yaml`](examples/kubernetes/base-deployment.yaml) |
+| 📖 [`04. Helm & Gateway API`](docs/04-kubernetes-ecosystem/helm-kustomize-gateway-api.md)<br/><sub>Helm 3 OCI packaging, Kustomize overlays, HTTPRoute gateway</sub> | ⚡ [`gateway-api-route.yaml`](examples/kubernetes/gateway-api-route.yaml) |
 
 <br/>
 
-### Track 05 // Platform Engineering & Internal Developer Platforms (IDP)
+### Track 05 // Platform Engineering &amp; Internal Developer Platforms (IDP)
 > Golden paths, Spotify Backstage software catalog, Score specification, and ephemeral PR preview environments with vCluster.
 
-| Module Guide | Core Concepts Covered | Code / Manifests |
-| :--- | :--- | :--- |
-| [`05. Platform Engineering & IDP`](docs/05-platform-engineering/internal-developer-platforms-idp.md) | Platform as a product, Backstage `catalog-info.yaml`, developer self-service portals | [Backstage Catalog Entity](docs/05-platform-engineering/internal-developer-platforms-idp.md#2-spotify-backstage-catalog-entity-catalog-infoyaml) |
-| [`05. Ephemeral Envs & vCluster`](docs/05-platform-engineering/multi-tenancy-and-ephemeral-environments.md) | Virtual clusters (vCluster), PR environment lifecycle automation, ResourceQuotas | [vCluster Architecture](docs/05-platform-engineering/multi-tenancy-and-ephemeral-environments.md#1-virtual-clusters-vcluster-architecture) |
+| Curriculum Module | Architecture &amp; Verified Manifests |
+| :--- | :--- |
+| 📖 [`05. Platform Engineering & IDP`](docs/05-platform-engineering/internal-developer-platforms-idp.md)<br/><sub>Platform as a product, Backstage catalog, developer self-service</sub> | ⚡ [Backstage Catalog Entity](docs/05-platform-engineering/internal-developer-platforms-idp.md#2-spotify-backstage-catalog-entity-catalog-infoyaml) |
+| 📖 [`05. Ephemeral Envs & vCluster`](docs/05-platform-engineering/multi-tenancy-and-ephemeral-environments.md)<br/><sub>Virtual clusters (vCluster), PR environment lifecycle, ResourceQuotas</sub> | ⚡ [vCluster Architecture Guide](docs/05-platform-engineering/multi-tenancy-and-ephemeral-environments.md#1-virtual-clusters-vcluster-architecture) |
 
 <br/>
 
-### Track 06 // Service Mesh, eBPF & Cloud Networking
-> High-performance eBPF data planes, Cilium CNI, Istio Ambient mesh (ztunnel & waypoint), and zero-trust L7 network policies.
+### Track 06 // Service Mesh, eBPF &amp; Cloud Networking
+> High-performance eBPF data planes, Cilium CNI, Istio Ambient mesh (ztunnel &amp; waypoint), and zero-trust L7 network policies.
 
-| Module Guide | Core Concepts Covered | Code / Manifests |
-| :--- | :--- | :--- |
-| [`06. Istio & Zero-Trust Mesh`](docs/06-networking-and-service-mesh/istio-envoy-and-zero-trust.md) | Ambient sidecarless mesh, HBONE protocol, mutual TLS, Istio `AuthorizationPolicy` | [Istio AuthPolicy](docs/06-networking-and-service-mesh/istio-envoy-and-zero-trust.md#2-zero-trust-authorizationpolicy-example) |
-| [`06. Cilium eBPF Networking`](docs/06-networking-and-service-mesh/cilium-and-ebpf-networking.md) | eBPF kernel hooks, bypass iptables, CiliumNetworkPolicy L7 filtering, Hubble observability | [`network-policy.yaml`](examples/kubernetes/network-policy.yaml) |
+| Curriculum Module | Architecture &amp; Verified Manifests |
+| :--- | :--- |
+| 📖 [`06. Istio & Zero-Trust Mesh`](docs/06-networking-and-service-mesh/istio-envoy-and-zero-trust.md)<br/><sub>Ambient sidecarless mesh, HBONE protocol, mutual TLS, AuthPolicy</sub> | ⚡ [Istio AuthPolicy YAML](docs/06-networking-and-service-mesh/istio-envoy-and-zero-trust.md#2-zero-trust-authorizationpolicy-example) |
+| 📖 [`06. Cilium eBPF Networking`](docs/06-networking-and-service-mesh/cilium-and-ebpf-networking.md)<br/><sub>eBPF kernel hooks, bypass iptables, CiliumNetworkPolicy L7</sub> | ⚡ [`network-policy.yaml`](examples/kubernetes/network-policy.yaml) |
 
 <br/>
 
-### Track 07 // Observability, OpenTelemetry & SRE Metrics
+### Track 07 // Observability, OpenTelemetry &amp; SRE Metrics
 > OpenTelemetry Collector architecture, W3C tracecontext, Prometheus TSDB, Grafana dashboards, and multi-burn-rate SLO alerts.
 
-| Module Guide | Core Concepts Covered | Code / Manifests |
-| :--- | :--- | :--- |
-| [`07. OpenTelemetry & Tracing`](docs/07-observability-and-telemetry/opentelemetry-collector-and-tracing.md) | OTel Collector pipeline (Receivers, Processors, Exporters), Grafana Tempo | [`otel-collector-config.yaml`](examples/observability/otel-collector-config.yaml) |
-| [`07. Prometheus & SLO/SLI`](docs/07-observability-and-telemetry/prometheus-grafana-and-slo-sli.md) | 4 Golden Signals, mathematical SLI/SLO modeling, multi-window multi-burn-rate alerting | [`prometheus-rules.yaml`](examples/observability/prometheus-rules.yaml) |
+| Curriculum Module | Architecture &amp; Verified Manifests |
+| :--- | :--- |
+| 📖 [`07. OpenTelemetry & Tracing`](docs/07-observability-and-telemetry/opentelemetry-collector-and-tracing.md)<br/><sub>OTel Collector pipeline (Receivers, Processors, Exporters), Tempo</sub> | ⚡ [`otel-collector-config.yaml`](examples/observability/otel-collector-config.yaml) |
+| 📖 [`07. Prometheus & SLO/SLI`](docs/07-observability-and-telemetry/prometheus-grafana-and-slo-sli.md)<br/><sub>4 Golden Signals, mathematical SLI/SLO modeling, multi-burn alerts</sub> | ⚡ [`prometheus-rules.yaml`](examples/observability/prometheus-rules.yaml) |
 
 <br/>
 
-### Track 08 // DevSecOps, Policy as Code & Supply Chain
+### Track 08 // DevSecOps, Policy as Code &amp; Supply Chain
 > Kubernetes admission control, Kyverno validation, Syft SBOM generation, and Cosign keyless container signing via Sigstore.
 
-| Module Guide | Core Concepts Covered | Code / Manifests |
-| :--- | :--- | :--- |
-| [`08. Policy as Code: Kyverno`](docs/08-devsecops-and-supply-chain/policy-as-code-kyverno-opa.md) | Validating/Mutating Webhooks, Kyverno ClusterPolicy, blocking root/privileged Pods | [`kyverno-clusterpolicy.yaml`](examples/security/kyverno-clusterpolicy.yaml) |
-| [`08. Supply Chain & Cosign`](docs/08-devsecops-and-supply-chain/sbom-cosign-and-secret-management.md) | SLSA L3 standard, Syft SPDX generation, Cosign keyless signatures, HashiCorp Vault | [`trivy-config.yaml`](examples/security/trivy-config.yaml) |
+| Curriculum Module | Architecture &amp; Verified Manifests |
+| :--- | :--- |
+| 📖 [`08. Policy as Code: Kyverno`](docs/08-devsecops-and-supply-chain/policy-as-code-kyverno-opa.md)<br/><sub>Validating/Mutating Webhooks, Kyverno ClusterPolicy, block root</sub> | ⚡ [`kyverno-clusterpolicy.yaml`](examples/security/kyverno-clusterpolicy.yaml) |
+| 📖 [`08. Supply Chain & Cosign`](docs/08-devsecops-and-supply-chain/sbom-cosign-and-secret-management.md)<br/><sub>SLSA L3 standard, Syft SPDX generation, Cosign keyless signatures</sub> | ⚡ [`trivy-config.yaml`](examples/security/trivy-config.yaml) |
 
 <br/>
 
-### Track 09 // SRE Principles, Error Budgets & Post-Mortems
+### Track 09 // SRE Principles, Error Budgets &amp; Post-Mortems
 > Mathematical error budgets ($1 - \text{SLO}$), deployment freeze gates, blameless post-mortem RCA, and interactive runbooks.
 
-| Module Guide | Core Concepts Covered | Code / Manifests |
-| :--- | :--- | :--- |
-| [`09. Error Budgets & Metrics`](docs/09-sre-and-incident-management/error-budgets-and-reliability-metrics.md) | MTBF, MTTD, MTTR calculations, rolling 30-day budget burn tracking, freeze policies | [Error Budget Formula](docs/09-sre-and-incident-management/error-budgets-and-reliability-metrics.md#1-the-error-budget-calculation-formula) |
-| [`09. Blameless Post-Mortems`](docs/09-sre-and-incident-management/postmortem-and-runbook-engineering.md) | 5 Whys root cause analysis, incident timeline reconstruction, actionable P0/P1 tasks | [SEV-1 Postmortem Template](docs/09-sre-and-incident-management/postmortem-and-runbook-engineering.md#1-blameless-incident-post-mortem-template) |
+| Curriculum Module | Architecture &amp; Verified Manifests |
+| :--- | :--- |
+| 📖 [`09. Error Budgets & Metrics`](docs/09-sre-and-incident-management/error-budgets-and-reliability-metrics.md)<br/><sub>MTBF, MTTD, MTTR calculations, rolling 30-day budget burn tracking</sub> | ⚡ [Error Budget Math](docs/09-sre-and-incident-management/error-budgets-and-reliability-metrics.md#1-the-error-budget-calculation-formula) |
+| 📖 [`09. Blameless Post-Mortems`](docs/09-sre-and-incident-management/postmortem-and-runbook-engineering.md)<br/><sub>5 Whys root cause analysis, incident timeline, actionable P0/P1 tasks</sub> | ⚡ [SEV-1 Postmortem Template](docs/09-sre-and-incident-management/postmortem-and-runbook-engineering.md#1-blameless-incident-post-mortem-template) |
 
 <br/>
 
-### Track 10 // Chaos Engineering & Resiliency
+### Track 10 // Chaos Engineering &amp; Resiliency
 > Principles of chaos experimentation, steady-state hypothesis formulation, Chaos Mesh CRDs, and network partition simulations.
 
-| Module Guide | Core Concepts Covered | Code / Manifests |
-| :--- | :--- | :--- |
-| [`10. Chaos Mesh Testing`](docs/10-chaos-engineering/chaos-mesh-and-resilience-testing.md) | Steady-state verification, Pod failure injection, cross-AZ latency, automated rollback | [NetworkChaos YAML](docs/10-chaos-engineering/chaos-mesh-and-resilience-testing.md#2-chaos-mesh-experiment-network-latency--packet-loss) |
+| Curriculum Module | Architecture &amp; Verified Manifests |
+| :--- | :--- |
+| 📖 [`10. Chaos Mesh Testing`](docs/10-chaos-engineering/chaos-mesh-and-resilience-testing.md)<br/><sub>Steady-state verification, Pod failure injection, cross-AZ latency</sub> | ⚡ [NetworkChaos Manifest](docs/10-chaos-engineering/chaos-mesh-and-resilience-testing.md#2-chaos-mesh-experiment-network-latency--packet-loss) |
 
 <br/>
 
-### Track 11 // Cloud FinOps & Cost Governance
+### Track 11 // Cloud FinOps &amp; Cost Governance
 > FinOps Framework (Inform, Optimize, Operate), Infracost PR cost estimations, Kubecost allocation, and Karpenter JIT scaling.
 
-| Module Guide | Core Concepts Covered | Code / Manifests |
-| :--- | :--- | :--- |
-| [`11. FinOps & Cost Governance`](docs/11-finops-and-cost-optimization/cloud-cost-governance-and-kubecost.md) | Shift-left cost gates, Kubernetes container rightsizing, Graviton ARM64 spot instances | [Infracost Action](docs/11-finops-and-cost-optimization/cloud-cost-governance-and-kubecost.md#2-shift-left-cost-estimation-with-infracost-in-github-actions) |
+| Curriculum Module | Architecture &amp; Verified Manifests |
+| :--- | :--- |
+| 📖 [`11. FinOps & Cost Governance`](docs/11-finops-and-cost-optimization/cloud-cost-governance-and-kubecost.md)<br/><sub>Shift-left cost gates, container rightsizing, Graviton spot instances</sub> | ⚡ [Infracost PR Workflow](docs/11-finops-and-cost-optimization/cloud-cost-governance-and-kubecost.md#2-shift-left-cost-estimation-with-infracost-in-github-actions) |
 
 <br/>
 
@@ -306,6 +306,7 @@ Dev-Ops/
 │   ├── bento-matrix.svg                        # 6-Pillar Core Architectural Matrix
 │   ├── tech-stack-matrix.svg                   # Categorized Technology Radar Landscape
 │   ├── gitops-pipeline.svg                     # End-to-End Cryptographic Delivery Flow
+│   ├── devops-curriculum-map.svg               # 12-Track Comprehensive Curriculum Map
 │   ├── banner_01.svg ... banner_07.svg         # Clean Master Section Header Dividers
 │   ├── sec_00.svg ... sec_11.svg               # Individual Track Badges
 │   └── footer.svg                              # Monorepo Footer Banner
@@ -396,4 +397,4 @@ trivy image --config examples/security/trivy-config.yaml ghcr.io/enterprise/micr
   <a href="https://github.com/Cell1991/Dev-Ops">
     <img src="./assets/footer.svg" alt="DevOps Compendium Footer" width="100%" />
   </a>
-</div>
+</div>\n
