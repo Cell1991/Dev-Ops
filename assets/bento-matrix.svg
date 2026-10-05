@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="100%" height="100%">
   <defs>
     <linearGradient id="bentoBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#040b13" />
@@ -37,7 +37,7 @@
   </style>
 
   <!-- Canvas Container -->
-  <rect width="1200" height="700" rx="18" fill="url(#bentoBg)" stroke="#163347" stroke-width="2" />
+  <rect width="1200" height="720" rx="18" fill="url(#bentoBg)" stroke="#163347" stroke-width="2" />
 
   <!-- HEADER -->
   <g transform="translate(45, 40)">
@@ -48,10 +48,10 @@
 
   <!-- ================= BENTO GRID BOXES ================= -->
 
-  <!-- CARD 1: PLATFORM ENGINEERING (Top-Left, Width: 460, Height: 245) -->
+  <!-- CARD 1: PLATFORM ENGINEERING (Top-Left, Width: 460, Height: 255) -->
   <g transform="translate(45, 110)">
-    <rect width="460" height="245" rx="14" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.5" />
-    <rect width="460" height="245" rx="14" fill="url(#cardGrid)" />
+    <rect width="460" height="255" rx="14" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.5" />
+    <rect width="460" height="255" rx="14" fill="url(#cardGrid)" />
     <rect x="0" y="0" width="460" height="5" rx="2.5" fill="url(#emeraldBar)" />
     
     <circle cx="38" cy="38" r="15" fill="#062533" stroke="#00FF9D" stroke-width="1.5" />
@@ -59,32 +59,39 @@
     <text x="66" y="34" fill="#FFFFFF" class="font-title" font-size="17">Platform Engineering &amp; IDP</text>
     <text x="66" y="50" fill="#00FF9D" class="font-code" font-size="11" font-weight="700">INTERNAL DEVELOPER PLATFORMS</text>
 
-    <text x="24" y="88" fill="#CBD5E1" class="font-body" font-size="13.5">
-      Treating platform as a product. Automated golden paths, self-service portals, and pre-configured templates reducing cognitive load.
+    <!-- Multi-line cleanly wrapped text -->
+    <text x="24" y="86" fill="#CBD5E1" class="font-body" font-size="13">
+      <tspan x="24" dy="0">Treating the internal platform as a product. Delivers</tspan>
+      <tspan x="24" dy="20">automated golden paths and self-service portals.</tspan>
     </text>
 
-    <g transform="translate(24, 134)">
-      <rect width="130" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
-      <text x="12" y="20" fill="#67E8F9" class="font-code" font-size="11" font-weight="700">Spotify Backstage</text>
-
-      <rect x="140" width="135" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
-      <text x="152" y="20" fill="#67E8F9" class="font-code" font-size="11" font-weight="700">Ephemeral Envs</text>
-
-      <rect x="285" width="125" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
-      <text x="297" y="20" fill="#67E8F9" class="font-code" font-size="11" font-weight="700">Score / Humanitec</text>
+    <!-- Sub Features Chips -->
+    <g transform="translate(24, 140)">
+      <g transform="translate(0, 0)">
+        <rect width="130" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
+        <text x="12" y="20" fill="#67E8F9" class="font-code" font-size="10.5" font-weight="700">Spotify Backstage</text>
+      </g>
+      <g transform="translate(138, 0)">
+        <rect width="132" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
+        <text x="12" y="20" fill="#67E8F9" class="font-code" font-size="10.5" font-weight="700">Ephemeral Envs</text>
+      </g>
+      <g transform="translate(278, 0)">
+        <rect width="132" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
+        <text x="12" y="20" fill="#67E8F9" class="font-code" font-size="10.5" font-weight="700">Score / Humanitec</text>
+      </g>
     </g>
 
-    <g transform="translate(24, 192)">
-      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="12">Time-to-Production: <tspan fill="#00FF9D" font-weight="800">&lt; 15 mins</tspan> | Dev Autonomy: <tspan fill="#38BDF8" font-weight="800">98%</tspan></text>
+    <g transform="translate(24, 200)">
+      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="11.5">Time-to-Prod: <tspan fill="#00FF9D" font-weight="800">&lt; 15 mins</tspan> | Autonomy: <tspan fill="#38BDF8" font-weight="800">98%</tspan></text>
       <rect x="0" y="26" width="412" height="7" rx="3.5" fill="#0e2333" />
       <rect x="0" y="26" width="395" height="7" rx="3.5" fill="url(#emeraldBar)" />
     </g>
   </g>
 
-  <!-- CARD 2: DECLARATIVE GITOPS (Top-Center, Width: 340, Height: 245) -->
+  <!-- CARD 2: DECLARATIVE GITOPS (Top-Center, Width: 340, Height: 255) -->
   <g transform="translate(525, 110)">
-    <rect width="340" height="245" rx="14" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.5" />
-    <rect width="340" height="245" rx="14" fill="url(#cardGrid)" />
+    <rect width="340" height="255" rx="14" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.5" />
+    <rect width="340" height="255" rx="14" fill="url(#cardGrid)" />
     <rect x="0" y="0" width="340" height="5" rx="2.5" fill="url(#emeraldBar)" />
 
     <circle cx="38" cy="38" r="15" fill="#062533" stroke="#06b6d4" stroke-width="1.5" />
@@ -92,29 +99,34 @@
     <text x="66" y="34" fill="#FFFFFF" class="font-title" font-size="17">Declarative GitOps</text>
     <text x="66" y="50" fill="#06B6D4" class="font-code" font-size="11" font-weight="700">CONTINUOUS RECONCILIATION</text>
 
-    <text x="24" y="88" fill="#CBD5E1" class="font-body" font-size="13">
-      Git repository as the single source of truth for desired cluster state. Automated drift detection and self-healing.
+    <!-- Multi-line cleanly wrapped text -->
+    <text x="24" y="86" fill="#CBD5E1" class="font-body" font-size="13">
+      <tspan x="24" dy="0">Git as the immutable single source of truth.</tspan>
+      <tspan x="24" dy="20">Automated drift detection and self-healing.</tspan>
     </text>
 
-    <g transform="translate(24, 134)">
-      <rect width="140" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
-      <text x="12" y="20" fill="#A7F3D0" class="font-code" font-size="11" font-weight="700">ArgoCD Sync Loop</text>
-
-      <rect x="150" width="140" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
-      <text x="162" y="20" fill="#A7F3D0" class="font-code" font-size="11" font-weight="700">Flux v2 Operators</text>
+    <g transform="translate(24, 140)">
+      <g transform="translate(0, 0)">
+        <rect width="140" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
+        <text x="12" y="20" fill="#A7F3D0" class="font-code" font-size="10.5" font-weight="700">ArgoCD Sync Loop</text>
+      </g>
+      <g transform="translate(150, 0)">
+        <rect width="140" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
+        <text x="12" y="20" fill="#A7F3D0" class="font-code" font-size="10.5" font-weight="700">Flux v2 Operators</text>
+      </g>
     </g>
 
-    <g transform="translate(24, 192)">
-      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="12">Configuration Drift: <tspan fill="#00FF9D" font-weight="800">0% Tolerance</tspan></text>
+    <g transform="translate(24, 200)">
+      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="11.5">Configuration Drift: <tspan fill="#00FF9D" font-weight="800">0% Tolerance</tspan></text>
       <rect x="0" y="26" width="292" height="7" rx="3.5" fill="#0e2333" />
       <rect x="0" y="26" width="292" height="7" rx="3.5" fill="#06b6d4" />
     </g>
   </g>
 
-  <!-- CARD 3: ZERO-TRUST DEVSECOPS (Top-Right, Width: 275, Height: 245) -->
+  <!-- CARD 3: ZERO-TRUST DEVSECOPS (Top-Right, Width: 275, Height: 255) -->
   <g transform="translate(880, 110)">
-    <rect width="275" height="245" rx="14" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.5" />
-    <rect width="275" height="245" rx="14" fill="url(#cardGrid)" />
+    <rect width="275" height="255" rx="14" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.5" />
+    <rect width="275" height="255" rx="14" fill="url(#cardGrid)" />
     <rect x="0" y="0" width="275" height="5" rx="2.5" fill="url(#purpleBar)" />
 
     <circle cx="36" cy="38" r="15" fill="#1b1233" stroke="#8b5cf6" stroke-width="1.5" />
@@ -122,29 +134,34 @@
     <text x="62" y="34" fill="#FFFFFF" class="font-title" font-size="16.5">Supply Chain Sec</text>
     <text x="62" y="50" fill="#A78BFA" class="font-code" font-size="10.5" font-weight="700">ZERO-TRUST &amp; SLSA L3</text>
 
-    <text x="20" y="88" fill="#CBD5E1" class="font-body" font-size="13">
-      Cryptographic signing, SBOM attestations, and admission policy enforcement.
+    <!-- Multi-line cleanly wrapped text -->
+    <text x="20" y="86" fill="#CBD5E1" class="font-body" font-size="13">
+      <tspan x="20" dy="0">Cryptographic signing, SBOM</tspan>
+      <tspan x="20" dy="20">attestation, and admission gates.</tspan>
     </text>
 
-    <g transform="translate(20, 134)">
-      <rect width="112" height="30" rx="7" fill="#17102e" stroke="#2d1e57" />
-      <text x="10" y="20" fill="#DDD6FE" class="font-code" font-size="10.5" font-weight="700">Kyverno / OPA</text>
-
-      <rect x="122" width="112" height="30" rx="7" fill="#17102e" stroke="#2d1e57" />
-      <text x="132" y="20" fill="#DDD6FE" class="font-code" font-size="10.5" font-weight="700">Cosign Keyless</text>
+    <g transform="translate(20, 140)">
+      <g transform="translate(0, 0)">
+        <rect width="112" height="30" rx="7" fill="#17102e" stroke="#2d1e57" />
+        <text x="10" y="20" fill="#DDD6FE" class="font-code" font-size="10" font-weight="700">Kyverno / OPA</text>
+      </g>
+      <g transform="translate(120, 0)">
+        <rect width="112" height="30" rx="7" fill="#17102e" stroke="#2d1e57" />
+        <text x="10" y="20" fill="#DDD6FE" class="font-code" font-size="10" font-weight="700">Cosign Keyless</text>
+      </g>
     </g>
 
-    <g transform="translate(20, 192)">
-      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="12">Gate: <tspan fill="#A78BFA" font-weight="800">Pre-Admission Block</tspan></text>
+    <g transform="translate(20, 200)">
+      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="11.5">Gate: <tspan fill="#A78BFA" font-weight="800">Pre-Admission</tspan></text>
       <rect x="0" y="26" width="235" height="7" rx="3.5" fill="#18122d" />
       <rect x="0" y="26" width="225" height="7" rx="3.5" fill="url(#purpleBar)" />
     </g>
   </g>
 
-  <!-- CARD 4: eBPF OBSERVABILITY (Bottom-Left, Width: 360, Height: 275) -->
-  <g transform="translate(45, 375)">
-    <rect width="360" height="275" rx="14" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.5" />
-    <rect width="360" height="275" rx="14" fill="url(#cardGrid)" />
+  <!-- CARD 4: eBPF OBSERVABILITY (Bottom-Left, Width: 360, Height: 265) -->
+  <g transform="translate(45, 385)">
+    <rect width="360" height="265" rx="14" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.5" />
+    <rect width="360" height="265" rx="14" fill="url(#cardGrid)" />
     <rect x="0" y="0" width="360" height="5" rx="2.5" fill="url(#emeraldBar)" />
 
     <circle cx="38" cy="38" r="15" fill="#062533" stroke="#00FF9D" stroke-width="1.5" />
@@ -152,32 +169,38 @@
     <text x="66" y="34" fill="#FFFFFF" class="font-title" font-size="17">eBPF &amp; Service Mesh</text>
     <text x="66" y="50" fill="#00FF9D" class="font-code" font-size="11" font-weight="700">KERNEL TELEMETRY &amp; MTLS</text>
 
-    <text x="24" y="90" fill="#CBD5E1" class="font-body" font-size="13">
-      Kernel-level packet inspection, bypass iptables for line-speed networking, mutual TLS, and granular layer-7 traffic shifting.
+    <!-- Multi-line cleanly wrapped text -->
+    <text x="24" y="86" fill="#CBD5E1" class="font-body" font-size="13">
+      <tspan x="24" dy="0">Kernel packet inspection, bypass iptables</tspan>
+      <tspan x="24" dy="20">for wire-speed mTLS and L7 routing.</tspan>
     </text>
 
-    <g transform="translate(24, 146)">
-      <rect width="98" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
-      <text x="10" y="20" fill="#67E8F9" class="font-code" font-size="10.5" font-weight="700">Cilium eBPF</text>
-
-      <rect x="108" width="98" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
-      <text x="118" y="20" fill="#67E8F9" class="font-code" font-size="10.5" font-weight="700">Istio Ambient</text>
-
-      <rect x="216" width="95" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
-      <text x="226" y="20" fill="#67E8F9" class="font-code" font-size="10.5" font-weight="700">Envoy L7</text>
+    <g transform="translate(24, 145)">
+      <g transform="translate(0, 0)">
+        <rect width="98" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
+        <text x="10" y="20" fill="#67E8F9" class="font-code" font-size="10" font-weight="700">Cilium eBPF</text>
+      </g>
+      <g transform="translate(106, 0)">
+        <rect width="98" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
+        <text x="10" y="20" fill="#67E8F9" class="font-code" font-size="10" font-weight="700">Istio Ambient</text>
+      </g>
+      <g transform="translate(212, 0)">
+        <rect width="95" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
+        <text x="12" y="20" fill="#67E8F9" class="font-code" font-size="10" font-weight="700">Envoy L7</text>
+      </g>
     </g>
 
-    <g transform="translate(24, 212)">
-      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="12">Latency Overhead: <tspan fill="#00FF9D" font-weight="800">&lt; 0.2ms</tspan></text>
+    <g transform="translate(24, 205)">
+      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="11.5">Latency Overhead: <tspan fill="#00FF9D" font-weight="800">&lt; 0.2ms</tspan></text>
       <rect x="0" y="26" width="312" height="7" rx="3.5" fill="#0e2333" />
       <rect x="0" y="26" width="298" height="7" rx="3.5" fill="url(#emeraldBar)" />
     </g>
   </g>
 
-  <!-- CARD 5: SRE & OPENTELEMETRY (Bottom-Center, Width: 440, Height: 275) -->
-  <g transform="translate(425, 375)">
-    <rect width="440" height="275" rx="14" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.5" />
-    <rect width="440" height="275" rx="14" fill="url(#cardGrid)" />
+  <!-- CARD 5: SRE & OPENTELEMETRY (Bottom-Center, Width: 440, Height: 265) -->
+  <g transform="translate(425, 385)">
+    <rect width="440" height="265" rx="14" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.5" />
+    <rect width="440" height="265" rx="14" fill="url(#cardGrid)" />
     <rect x="0" y="0" width="440" height="5" rx="2.5" fill="url(#amberBar)" />
 
     <circle cx="38" cy="38" r="15" fill="#291807" stroke="#f59e0b" stroke-width="1.5" />
@@ -185,32 +208,38 @@
     <text x="66" y="34" fill="#FFFFFF" class="font-title" font-size="17">SRE, OpenTelemetry &amp; SLOs</text>
     <text x="66" y="50" fill="#F59E0B" class="font-code" font-size="11" font-weight="700">HIGH-CARDINALITY OBSERVABILITY</text>
 
-    <text x="24" y="90" fill="#CBD5E1" class="font-body" font-size="13">
-      Vendor-neutral distributed tracing, metrics, and logs via OpenTelemetry Collector. Multi-window error budget burn rate alerting.
+    <!-- Multi-line cleanly wrapped text -->
+    <text x="24" y="86" fill="#CBD5E1" class="font-body" font-size="13">
+      <tspan x="24" dy="0">Vendor-neutral traces, metrics, and logs via OTel.</tspan>
+      <tspan x="24" dy="20">Multi-window SLO error budget burn rate alerting.</tspan>
     </text>
 
-    <g transform="translate(24, 146)">
-      <rect width="120" height="30" rx="7" fill="#1e1307" stroke="#3b2308" />
-      <text x="12" y="20" fill="#FDE68A" class="font-code" font-size="10.5" font-weight="700">OTel Collector</text>
-
-      <rect x="130" width="125" height="30" rx="7" fill="#1e1307" stroke="#3b2308" />
-      <text x="142" y="20" fill="#FDE68A" class="font-code" font-size="10.5" font-weight="700">Prom / Grafana</text>
-
-      <rect x="265" width="125" height="30" rx="7" fill="#1e1307" stroke="#3b2308" />
-      <text x="277" y="20" fill="#FDE68A" class="font-code" font-size="10.5" font-weight="700">Tempo Tracing</text>
+    <g transform="translate(24, 145)">
+      <g transform="translate(0, 0)">
+        <rect width="122" height="30" rx="7" fill="#1e1307" stroke="#3b2308" />
+        <text x="12" y="20" fill="#FDE68A" class="font-code" font-size="10.5" font-weight="700">OTel Collector</text>
+      </g>
+      <g transform="translate(130, 0)">
+        <rect width="122" height="30" rx="7" fill="#1e1307" stroke="#3b2308" />
+        <text x="12" y="20" fill="#FDE68A" class="font-code" font-size="10.5" font-weight="700">Prom / Grafana</text>
+      </g>
+      <g transform="translate(260, 0)">
+        <rect width="122" height="30" rx="7" fill="#1e1307" stroke="#3b2308" />
+        <text x="12" y="20" fill="#FDE68A" class="font-code" font-size="10.5" font-weight="700">Tempo Tracing</text>
+      </g>
     </g>
 
-    <g transform="translate(24, 212)">
-      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="12">MTTD: <tspan fill="#F59E0B" font-weight="800">&lt; 90s</tspan> | MTTR: <tspan fill="#00FF9D" font-weight="800">&lt; 5m</tspan></text>
+    <g transform="translate(24, 205)">
+      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="11.5">MTTD: <tspan fill="#F59E0B" font-weight="800">&lt; 90s</tspan> | MTTR: <tspan fill="#00FF9D" font-weight="800">&lt; 5m</tspan></text>
       <rect x="0" y="26" width="392" height="7" rx="3.5" fill="#1f1408" />
       <rect x="0" y="26" width="380" height="7" rx="3.5" fill="url(#amberBar)" />
     </g>
   </g>
 
-  <!-- CARD 6: CLOUD FINOPS (Bottom-Right, Width: 275, Height: 275) -->
-  <g transform="translate(880, 375)">
-    <rect width="275" height="275" rx="14" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.5" />
-    <rect width="275" height="275" rx="14" fill="url(#cardGrid)" />
+  <!-- CARD 6: CLOUD FINOPS (Bottom-Right, Width: 275, Height: 265) -->
+  <g transform="translate(880, 385)">
+    <rect width="275" height="265" rx="14" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.5" />
+    <rect width="275" height="265" rx="14" fill="url(#cardGrid)" />
     <rect x="0" y="0" width="275" height="5" rx="2.5" fill="url(#emeraldBar)" />
 
     <circle cx="36" cy="38" r="15" fill="#062533" stroke="#00FF9D" stroke-width="1.5" />
@@ -218,20 +247,25 @@
     <text x="62" y="34" fill="#FFFFFF" class="font-title" font-size="16.5">FinOps &amp; Cloud</text>
     <text x="62" y="50" fill="#00FF9D" class="font-code" font-size="10.5" font-weight="700">COST GOVERNANCE</text>
 
-    <text x="20" y="90" fill="#CBD5E1" class="font-body" font-size="13">
-      Cloud cost attribution, automated CI pull request cost estimations with Infracost, and Karpenter node autoscale.
+    <!-- Multi-line cleanly wrapped text -->
+    <text x="20" y="86" fill="#CBD5E1" class="font-body" font-size="13">
+      <tspan x="20" dy="0">Cloud cost attribution, Infracost</tspan>
+      <tspan x="20" dy="20">PR gates &amp; Karpenter autoscale.</tspan>
     </text>
 
-    <g transform="translate(20, 146)">
-      <rect width="112" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
-      <text x="10" y="20" fill="#6EE7B7" class="font-code" font-size="10.5" font-weight="700">Kubecost Core</text>
-
-      <rect x="122" width="112" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
-      <text x="132" y="20" fill="#6EE7B7" class="font-code" font-size="10.5" font-weight="700">Infracost CI</text>
+    <g transform="translate(20, 145)">
+      <g transform="translate(0, 0)">
+        <rect width="112" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
+        <text x="10" y="20" fill="#6EE7B7" class="font-code" font-size="10" font-weight="700">Kubecost Core</text>
+      </g>
+      <g transform="translate(120, 0)">
+        <rect width="112" height="30" rx="7" fill="#0a2333" stroke="#1e3a4e" />
+        <text x="10" y="20" fill="#6EE7B7" class="font-code" font-size="10" font-weight="700">Infracost CI</text>
+      </g>
     </g>
 
-    <g transform="translate(20, 212)">
-      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="12">Cloud Waste Cut: <tspan fill="#00FF9D" font-weight="800">~35-45%</tspan></text>
+    <g transform="translate(20, 205)">
+      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="11.5">Cloud Waste: <tspan fill="#00FF9D" font-weight="800">~35-45% Cut</tspan></text>
       <rect x="0" y="26" width="235" height="7" rx="3.5" fill="#0e2333" />
       <rect x="0" y="26" width="220" height="7" rx="3.5" fill="url(#emeraldBar)" />
     </g>
