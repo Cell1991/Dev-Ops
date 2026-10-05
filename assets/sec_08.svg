@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 96" width="100%" height="100%">
+  <defs>
+    <linearGradient id="secGrad_08" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+    <linearGradient id="barBg_08" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061622" />
+      <stop offset="100%" stop-color="#020811" />
+    </linearGradient>
+    <pattern id="dotGrid_08" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#132a3e" />
+    </pattern>
+  </defs>
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  </style>
+  <rect width="1200" height="96" rx="10" fill="url(#barBg_08)" stroke="#163347" stroke-width="1.2" />
+  <rect width="1200" height="96" fill="url(#dotGrid_08)" opacity="0.5" />
+  <rect x="0" y="0" width="6" height="96" rx="3" fill="url(#secGrad_08)" />
+  
+  <!-- Left Track Tag -->
+  <g transform="translate(30, 24)">
+    <rect x="0" y="0" width="85" height="24" rx="6" fill="#0b2436" stroke="#EC4899" stroke-width="1" />
+    <text x="42" y="16" fill="#EC4899" class="mono" font-size="11" font-weight="700" text-anchor="middle">TRACK 08</text>
+  </g>
+
+  <!-- Title & Subtitle -->
+  <g transform="translate(130, 26)">
+    <text x="0" y="18" fill="#FFFFFF" class="sans" font-size="17" font-weight="800" letter-spacing="0.5">DEVSECOPS & SUPPLY CHAIN</text>
+    <text x="0" y="42" fill="#94A3B8" class="sans" font-size="12">Kyverno policy-as-code, Trivy CVE scanning, Cosign keyless signing, and Syft SBOM</text>
+  </g>
+
+  <!-- Right Status Chip -->
+  <g transform="translate(1030, 36)">
+    <rect x="0" y="0" width="135" height="24" rx="12" fill="#081e2c" stroke="#1b364b" />
+    <circle cx="12" cy="12" r="4" fill="#EC4899" />
+    <text x="24" y="16" fill="#E2E8F0" class="mono" font-size="10" font-weight="600">ENTERPRISE TIER</text>
+  </g>
+</svg>

@@ -1,0 +1,258 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bentoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040b13" />
+      <stop offset="100%" stop-color="#02060b" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071b29" />
+      <stop offset="100%" stop-color="#030d16" />
+    </linearGradient>
+
+    <linearGradient id="emeraldBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+
+    <linearGradient id="amberBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+
+    <linearGradient id="purpleBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <pattern id="cardGrid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#1e3a4e" opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseCardDot {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+    .pulse-dot {
+      transform-origin: center;
+      animation: pulseCardDot 3s ease-in-out infinite;
+    }
+    .font-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 800; }
+    .font-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 400; }
+    .font-code { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+  </style>
+
+  <!-- Canvas Container -->
+  <rect width="1200" height="680" rx="16" fill="url(#bentoBg)" stroke="#163347" stroke-width="1.5" />
+
+  <!-- HEADER -->
+  <g transform="translate(40, 36)">
+    <text x="0" y="0" fill="#10B981" class="font-code" font-size="12" font-weight="700" letter-spacing="2">02 // ARCHITECTURAL PILLARS</text>
+    <text x="0" y="26" fill="#F8FAFC" class="font-title" font-size="22">Modern DevOps &amp; Cloud Platform Bento Matrix</text>
+    <text x="0" y="46" fill="#94A3B8" class="font-body" font-size="12.5">Foundational capabilities powering resilient, hyper-scale cloud native engineering organizations</text>
+  </g>
+
+  <!-- ================= BENTO GRID BOXES ================= -->
+
+  <!-- CARD 1: PLATFORM ENGINEERING (Large Top-Left, Width: 460, Height: 240) -->
+  <g transform="translate(40, 100)">
+    <rect width="460" height="240" rx="12" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.2" />
+    <rect width="460" height="240" rx="12" fill="url(#cardGrid)" />
+    <!-- Accent Top Bar -->
+    <rect x="0" y="0" width="460" height="4" rx="2" fill="url(#emeraldBar)" />
+    
+    <!-- Icon & Header -->
+    <circle cx="36" cy="38" r="14" fill="#062533" stroke="#10b981" stroke-width="1.2" />
+    <polygon points="36,29 43,41 29,41" fill="#10B981" />
+    <text x="62" y="34" fill="#FFFFFF" class="font-title" font-size="16">Platform Engineering &amp; IDP</text>
+    <text x="62" y="48" fill="#10B981" class="font-code" font-size="10">INTERNAL DEVELOPER PLATFORMS</text>
+
+    <!-- Description -->
+    <text x="24" y="85" fill="#CBD5E1" class="font-body" font-size="12.5" width="410">
+      Treating the platform as a product. Delivers automated golden paths, self-service scaffolding, and reduces developer cognitive load through unified catalogs.
+    </text>
+
+    <!-- Sub Features Badges -->
+    <g transform="translate(24, 130)">
+      <rect x="0" y="0" width="125" height="26" rx="6" fill="#0a2333" stroke="#1e3a4e" />
+      <text x="12" y="17" fill="#67E8F9" class="font-code" font-size="10">Spotify Backstage</text>
+
+      <rect x="135" y="0" width="135" height="26" rx="6" fill="#0a2333" stroke="#1e3a4e" />
+      <text x="12" y="17" fill="#67E8F9" class="font-code" font-size="10">Ephemeral Envs</text>
+
+      <rect x="280" y="0" width="128" height="26" rx="6" fill="#0a2333" stroke="#1e3a4e" />
+      <text x="12" y="17" fill="#67E8F9" class="font-code" font-size="10">Score / Humanitec</text>
+    </g>
+
+    <!-- Metrics Line -->
+    <g transform="translate(24, 185)">
+      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="11">Time-to-Production: <tspan fill="#00FF9D" font-weight="700">&lt; 15 mins</tspan> | Dev Autonomy: <tspan fill="#38BDF8" font-weight="700">98%</tspan></text>
+      <rect x="0" y="26" width="412" height="6" rx="3" fill="#0e2333" />
+      <rect x="0" y="26" width="390" height="6" rx="3" fill="url(#emeraldBar)" />
+    </g>
+  </g>
+
+  <!-- CARD 2: DECLARATIVE GITOPS (Top-Center, Width: 340, Height: 240) -->
+  <g transform="translate(520, 100)">
+    <rect width="340" height="240" rx="12" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.2" />
+    <rect width="340" height="240" rx="12" fill="url(#cardGrid)" />
+    <rect x="0" y="0" width="340" height="4" rx="2" fill="url(#emeraldBar)" />
+
+    <circle cx="36" cy="38" r="14" fill="#062533" stroke="#06b6d4" stroke-width="1.2" />
+    <circle cx="36" cy="38" r="5" fill="#06B6D4" />
+    <text x="62" y="34" fill="#FFFFFF" class="font-title" font-size="16">Declarative GitOps</text>
+    <text x="62" y="48" fill="#06B6D4" class="font-code" font-size="10">CONTINUOUS RECONCILIATION</text>
+
+    <text x="24" y="85" fill="#CBD5E1" class="font-body" font-size="12">
+      Git repository as the single source of truth for desired cluster state. Continuous automated drift detection and immediate self-healing.
+    </text>
+
+    <g transform="translate(24, 132)">
+      <rect x="0" y="0" width="138" height="26" rx="6" fill="#0a2333" stroke="#1e3a4e" />
+      <text x="12" y="17" fill="#A7F3D0" class="font-code" font-size="10">ArgoCD Sync Loop</text>
+
+      <rect x="150" y="0" width="138" height="26" rx="6" fill="#0a2333" stroke="#1e3a4e" />
+      <text x="12" y="17" fill="#A7F3D0" class="font-code" font-size="10">Flux v2 Operators</text>
+    </g>
+
+    <g transform="translate(24, 185)">
+      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="11">Configuration Drift: <tspan fill="#00FF9D" font-weight="700">0% Tolerance</tspan></text>
+      <rect x="0" y="26" width="292" height="6" rx="3" fill="#0e2333" />
+      <rect x="0" y="26" width="292" height="6" rx="3" fill="#06b6d4" />
+    </g>
+  </g>
+
+  <!-- CARD 3: ZERO-TRUST DEVSECOPS (Top-Right, Width: 280, Height: 240) -->
+  <g transform="translate(880, 100)">
+    <rect width="280" height="240" rx="12" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.2" />
+    <rect width="280" height="240" rx="12" fill="url(#cardGrid)" />
+    <rect x="0" y="0" width="280" height="4" rx="2" fill="url(#purpleBar)" />
+
+    <circle cx="36" cy="38" r="14" fill="#1b1233" stroke="#8b5cf6" stroke-width="1.2" />
+    <rect x="31" y="33" width="10" height="10" rx="2" fill="#8B5CF6" />
+    <text x="60" y="34" fill="#FFFFFF" class="font-title" font-size="15.5">Supply Chain Security</text>
+    <text x="60" y="48" fill="#A78BFA" class="font-code" font-size="9.5">ZERO-TRUST &amp; SLSA L3</text>
+
+    <text x="20" y="85" fill="#CBD5E1" class="font-body" font-size="12">
+      Cryptographic signing, SBOM attestations, admission policy enforcement, and CVE scanning.
+    </text>
+
+    <g transform="translate(20, 132)">
+      <rect x="0" y="0" width="112" height="26" rx="6" fill="#17102e" stroke="#2d1e57" />
+      <text x="10" y="17" fill="#DDD6FE" class="font-code" font-size="9.5">Kyverno / OPA</text>
+
+      <rect x="122" y="0" width="112" height="26" rx="6" fill="#17102e" stroke="#2d1e57" />
+      <text x="10" y="17" fill="#DDD6FE" class="font-code" font-size="9.5">Cosign / Sigstore</text>
+    </g>
+
+    <g transform="translate(20, 185)">
+      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="11">Security Gate: <tspan fill="#A78BFA" font-weight="700">Pre-Admission Block</tspan></text>
+      <rect x="0" y="26" width="240" height="6" rx="3" fill="#18122d" />
+      <rect x="0" y="26" width="230" height="6" rx="3" fill="url(#purpleBar)" />
+    </g>
+  </g>
+
+  <!-- CARD 4: eBPF OBSERVABILITY & SERVICE MESH (Bottom-Left, Width: 360, Height: 270) -->
+  <g transform="translate(40, 360)">
+    <rect width="360" height="270" rx="12" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.2" />
+    <rect width="360" height="270" rx="12" fill="url(#cardGrid)" />
+    <rect x="0" y="0" width="360" height="4" rx="2" fill="url(#emeraldBar)" />
+
+    <circle cx="36" cy="38" r="14" fill="#062533" stroke="#10b981" stroke-width="1.2" />
+    <text x="36" y="42" fill="#10B981" class="font-code" font-size="12" text-anchor="middle" font-weight="700">λ</text>
+    <text x="62" y="34" fill="#FFFFFF" class="font-title" font-size="16">eBPF &amp; Service Mesh</text>
+    <text x="62" y="48" fill="#10B981" class="font-code" font-size="10">KERNEL TELEMETRY &amp; MTLS</text>
+
+    <text x="24" y="85" fill="#CBD5E1" class="font-body" font-size="12">
+      Kernel-level deep packet inspection, bypass iptables for near-native wire speed networking, mutual TLS, and granular layer-7 traffic shifting.
+    </text>
+
+    <g transform="translate(24, 140)">
+      <rect x="0" y="0" width="95" height="26" rx="6" fill="#0a2333" stroke="#1e3a4e" />
+      <text x="8" y="17" fill="#67E8F9" class="font-code" font-size="9.5">Cilium eBPF</text>
+
+      <rect x="105" y="0" width="95" height="26" rx="6" fill="#0a2333" stroke="#1e3a4e" />
+      <text x="8" y="17" fill="#67E8F9" class="font-code" font-size="9.5">Istio Ambient</text>
+
+      <rect x="210" y="0" width="95" height="26" rx="6" fill="#0a2333" stroke="#1e3a4e" />
+      <text x="8" y="17" fill="#67E8F9" class="font-code" font-size="9.5">Envoy Proxy</text>
+    </g>
+
+    <g transform="translate(24, 205)">
+      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="11">Network Latency Overhead: <tspan fill="#00FF9D" font-weight="700">&lt; 0.2ms</tspan></text>
+      <rect x="0" y="26" width="312" height="6" rx="3" fill="#0e2333" />
+      <rect x="0" y="26" width="295" height="6" rx="3" fill="url(#emeraldBar)" />
+    </g>
+  </g>
+
+  <!-- CARD 5: SRE & OPENTELEMETRY (Bottom-Center, Width: 440, Height: 270) -->
+  <g transform="translate(420, 360)">
+    <rect width="440" height="270" rx="12" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.2" />
+    <rect width="440" height="270" rx="12" fill="url(#cardGrid)" />
+    <rect x="0" y="0" width="440" height="4" rx="2" fill="url(#amberBar)" />
+
+    <circle cx="36" cy="38" r="14" fill="#291807" stroke="#f59e0b" stroke-width="1.2" />
+    <circle cx="36" cy="38" r="4" fill="#F59E0B" />
+    <text x="62" y="34" fill="#FFFFFF" class="font-title" font-size="16">SRE, OpenTelemetry &amp; SLOs</text>
+    <text x="62" y="48" fill="#F59E0B" class="font-code" font-size="10">HIGH-CARDINALITY OBSERVABILITY</text>
+
+    <text x="24" y="85" fill="#CBD5E1" class="font-body" font-size="12">
+      Vendor-neutral distributed tracing, metrics, and structured logs via OpenTelemetry Collector. Error budget burn rate alerts for proactive incident response.
+    </text>
+
+    <g transform="translate(24, 140)">
+      <rect x="0" y="0" width="120" height="26" rx="6" fill="#1e1307" stroke="#3b2308" />
+      <text x="10" y="17" fill="#FDE68A" class="font-code" font-size="9.5">OTel Collector</text>
+
+      <rect x="130" y="0" width="120" height="26" rx="6" fill="#1e1307" stroke="#3b2308" />
+      <text x="10" y="17" fill="#FDE68A" class="font-code" font-size="9.5">Prometheus/Grafana</text>
+
+      <rect x="260" y="0" width="125" height="26" rx="6" fill="#1e1307" stroke="#3b2308" />
+      <text x="10" y="17" fill="#FDE68A" class="font-code" font-size="9.5">Tempo Tracing</text>
+    </g>
+
+    <g transform="translate(24, 205)">
+      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="11">MTTD (Mean Time to Detect): <tspan fill="#F59E0B" font-weight="700">&lt; 90s</tspan> | MTTR: <tspan fill="#00FF9D" font-weight="700">&lt; 5m</tspan></text>
+      <rect x="0" y="26" width="392" height="6" rx="3" fill="#1f1408" />
+      <rect x="0" y="26" width="375" height="6" rx="3" fill="url(#amberBar)" />
+    </g>
+  </g>
+
+  <!-- CARD 6: CLOUD FINOPS & COST OPTIMIZATION (Bottom-Right, Width: 280, Height: 270) -->
+  <g transform="translate(880, 360)">
+    <rect width="280" height="270" rx="12" fill="url(#cardGrad1)" stroke="#1e3a4e" stroke-width="1.2" />
+    <rect width="280" height="270" rx="12" fill="url(#cardGrid)" />
+    <rect x="0" y="0" width="280" height="4" rx="2" fill="url(#emeraldBar)" />
+
+    <circle cx="36" cy="38" r="14" fill="#062533" stroke="#10b981" stroke-width="1.2" />
+    <text x="36" y="42" fill="#10B981" class="font-code" font-size="13" text-anchor="middle" font-weight="700">$</text>
+    <text x="60" y="34" fill="#FFFFFF" class="font-title" font-size="15.5">FinOps &amp; Efficiency</text>
+    <text x="60" y="48" fill="#10B981" class="font-code" font-size="9.5">CLOUD COST GOVERNANCE</text>
+
+    <text x="20" y="85" fill="#CBD5E1" class="font-body" font-size="12">
+      Continuous cloud cost attribution, CI pull request cost estimations with Infracost, and Karpenter node autoscale.
+    </text>
+
+    <g transform="translate(20, 140)">
+      <rect x="0" y="0" width="112" height="26" rx="6" fill="#0a2333" stroke="#1e3a4e" />
+      <text x="10" y="17" fill="#6EE7B7" class="font-code" font-size="9.5">Kubecost Core</text>
+
+      <rect x="122" y="0" width="112" height="26" rx="6" fill="#0a2333" stroke="#1e3a4e" />
+      <text x="10" y="17" fill="#6EE7B7" class="font-code" font-size="9.5">Infracost CI</text>
+    </g>
+
+    <g transform="translate(20, 205)">
+      <text x="0" y="16" fill="#94A3B8" class="font-code" font-size="11">Cloud Waste Reduction: <tspan fill="#00FF9D" font-weight="700">~35-45%</tspan></text>
+      <rect x="0" y="26" width="240" height="6" rx="3" fill="#0e2333" />
+      <rect x="0" y="26" width="220" height="6" rx="3" fill="url(#emeraldBar)" />
+    </g>
+  </g>
+
+</svg>

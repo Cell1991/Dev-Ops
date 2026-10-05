@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="techBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030910" />
+      <stop offset="100%" stop-color="#020509" />
+    </linearGradient>
+
+    <linearGradient id="glowTier1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+
+    <linearGradient id="glowTier2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+
+    <linearGradient id="glowTier3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+
+    <linearGradient id="glowTier4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+
+    <pattern id="matrixGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#0e2333" stroke-width="0.5" />
+    </pattern>
+  </defs>
+
+  <style>
+    .font-h { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 800; }
+    .font-c { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+    .font-b { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; }
+  </style>
+
+  <!-- Container -->
+  <rect width="1200" height="620" rx="16" fill="url(#techBg)" stroke="#163347" stroke-width="1.5" />
+  <rect width="1200" height="620" fill="url(#matrixGrid)" opacity="0.6" />
+
+  <!-- Title Banner -->
+  <g transform="translate(40, 36)">
+    <text x="0" y="0" fill="#10B981" class="font-c" font-size="12" font-weight="700" letter-spacing="2">03 // TAXONOMIC TECH RADAR &amp; LANDSCAPE</text>
+    <text x="0" y="24" fill="#F8FAFC" class="font-h" font-size="20">Modern Cloud-Native &amp; Platform Engineering Tech Matrix</text>
+    <text x="0" y="44" fill="#94A3B8" class="font-b" font-size="12">Production-grade classification of modern tools across core infrastructure and platform domains</text>
+  </g>
+
+  <!-- 4 ROWS OF DOMAINS -->
+
+  <!-- ROW 1: PLATFORM, ORCHESTRATION & RUNTIMES -->
+  <g transform="translate(40, 100)">
+    <rect width="1120" height="110" rx="10" fill="#061622" stroke="#1b364b" stroke-width="1" />
+    <rect x="0" y="0" width="6" height="110" rx="3" fill="url(#glowTier1)" />
+    <text x="24" y="26" fill="#10B981" class="font-c" font-size="11" font-weight="700">DOMAIN 01</text>
+    <text x="24" y="46" fill="#FFFFFF" class="font-h" font-size="15">Containers &amp; Orchestration</text>
+    <text x="24" y="66" fill="#94A3B8" class="font-b" font-size="11">Runtimes, Orchestration, Ingress &amp; Multi-tenancy</text>
+
+    <!-- Tool Chips -->
+    <g transform="translate(300, 20)">
+      <!-- Tool 1 -->
+      <rect x="0" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#10b981" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Kubernetes (v1.31+)</text>
+      <text x="12" y="27" fill="#6EE7B7" class="font-c" font-size="8.5">Core Orchestrator</text>
+
+      <!-- Tool 2 -->
+      <rect x="155" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#1e3a4e" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Docker &amp; Buildx</text>
+      <text x="12" y="27" fill="#38BDF8" class="font-c" font-size="8.5">OCI Image Engine</text>
+
+      <!-- Tool 3 -->
+      <rect x="310" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#1e3a4e" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Helm 3 &amp; Kustomize</text>
+      <text x="12" y="27" fill="#38BDF8" class="font-c" font-size="8.5">Package &amp; Overlay</text>
+
+      <!-- Tool 4 -->
+      <rect x="465" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#1e3a4e" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">K8s Gateway API</text>
+      <text x="12" y="27" fill="#38BDF8" class="font-c" font-size="8.5">Next-Gen Ingress</text>
+
+      <!-- Tool 5 -->
+      <rect x="620" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#1e3a4e" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Karpenter / HPA</text>
+      <text x="12" y="27" fill="#38BDF8" class="font-c" font-size="8.5">JIT Node Autoscaling</text>
+    </g>
+
+    <!-- Sub-row Chips -->
+    <g transform="translate(300, 62)">
+      <rect x="0" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">containerd &amp; CRI-O</text>
+
+      <rect x="155" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Distroless / Chainguard</text>
+
+      <rect x="310" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Podman / Rootless</text>
+
+      <rect x="465" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">vCluster Multi-Tenant</text>
+
+      <rect x="620" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Spotify Backstage IDP</text>
+    </g>
+  </g>
+
+  <!-- ROW 2: INFRASTRUCTURE AS CODE & GITOPS -->
+  <g transform="translate(40, 225)">
+    <rect width="1120" height="110" rx="10" fill="#061622" stroke="#1b364b" stroke-width="1" />
+    <rect x="0" y="0" width="6" height="110" rx="3" fill="url(#glowTier2)" />
+    <text x="24" y="26" fill="#38BDF8" class="font-c" font-size="11" font-weight="700">DOMAIN 02</text>
+    <text x="24" y="46" fill="#FFFFFF" class="font-h" font-size="15">IaC, CI/CD &amp; GitOps</text>
+    <text x="24" y="66" fill="#94A3B8" class="font-b" font-size="11">Declarative Provisioning, Pipelines &amp; Sync</text>
+
+    <!-- Tool Chips -->
+    <g transform="translate(300, 20)">
+      <rect x="0" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#38bdf8" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Terraform / OpenTofu</text>
+      <text x="12" y="27" fill="#7DD3FC" class="font-c" font-size="8.5">Cloud State Engine</text>
+
+      <rect x="155" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#38bdf8" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">ArgoCD &amp; Rollouts</text>
+      <text x="12" y="27" fill="#7DD3FC" class="font-c" font-size="8.5">GitOps &amp; Canary</text>
+
+      <rect x="310" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#1e3a4e" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">GitHub Actions CI</text>
+      <text x="12" y="27" fill="#7DD3FC" class="font-c" font-size="8.5">Enterprise Workflows</text>
+
+      <rect x="465" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#1e3a4e" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Ansible Automation</text>
+      <text x="12" y="27" fill="#7DD3FC" class="font-c" font-size="8.5">Config Management</text>
+
+      <rect x="620" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#1e3a4e" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Crossplane Control</text>
+      <text x="12" y="27" fill="#7DD3FC" class="font-c" font-size="8.5">K8s Native Cloud IaC</text>
+    </g>
+
+    <g transform="translate(300, 62)">
+      <rect x="0" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Terragrunt DRY State</text>
+
+      <rect x="155" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Flux v2 GitOps</text>
+
+      <rect x="310" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">GitLab CI / Tekton</text>
+
+      <rect x="465" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Flagger Progressive</text>
+
+      <rect x="620" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Atlantis PR Automation</text>
+    </g>
+  </g>
+
+  <!-- ROW 3: OBSERVABILITY, SRE & NETWORKING -->
+  <g transform="translate(40, 350)">
+    <rect width="1120" height="110" rx="10" fill="#061622" stroke="#1b364b" stroke-width="1" />
+    <rect x="0" y="0" width="6" height="110" rx="3" fill="url(#glowTier3)" />
+    <text x="24" y="26" fill="#A78BFA" class="font-c" font-size="11" font-weight="700">DOMAIN 03</text>
+    <text x="24" y="46" fill="#FFFFFF" class="font-h" font-size="15">Observability &amp; Mesh</text>
+    <text x="24" y="66" fill="#94A3B8" class="font-b" font-size="11">Telemetry, Tracing, Metrics &amp; eBPF Networking</text>
+
+    <!-- Tool Chips -->
+    <g transform="translate(300, 20)">
+      <rect x="0" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#8b5cf6" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">OpenTelemetry (OTel)</text>
+      <text x="12" y="27" fill="#DDD6FE" class="font-c" font-size="8.5">Universal Standard</text>
+
+      <rect x="155" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#8b5cf6" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Prometheus &amp; Grafana</text>
+      <text x="12" y="27" fill="#DDD6FE" class="font-c" font-size="8.5">Metrics &amp; Dashboards</text>
+
+      <rect x="310" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#1e3a4e" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Cilium (eBPF CNI)</text>
+      <text x="12" y="27" fill="#DDD6FE" class="font-c" font-size="8.5">High-Speed Network</text>
+
+      <rect x="465" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#1e3a4e" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Istio Ambient Mesh</text>
+      <text x="12" y="27" fill="#DDD6FE" class="font-c" font-size="8.5">Sidecarless mTLS</text>
+
+      <rect x="620" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#1e3a4e" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Tempo &amp; Loki</text>
+      <text x="12" y="27" fill="#DDD6FE" class="font-c" font-size="8.5">Distributed Logs/Trace</text>
+    </g>
+
+    <g transform="translate(300, 62)">
+      <rect x="0" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Thanos &amp; Cortex</text>
+
+      <rect x="155" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Sloth / Pyrra (SLO)</text>
+
+      <rect x="310" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Envoy Gateway</text>
+
+      <rect x="465" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Vector Telemetry Pipe</text>
+
+      <rect x="620" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Chaos Mesh / Litmus</text>
+    </g>
+  </g>
+
+  <!-- ROW 4: DEVSECOPS, POLICY & FINOPS -->
+  <g transform="translate(40, 475)">
+    <rect width="1120" height="110" rx="10" fill="#061622" stroke="#1b364b" stroke-width="1" />
+    <rect x="0" y="0" width="6" height="110" rx="3" fill="url(#glowTier4)" />
+    <text x="24" y="26" fill="#F59E0B" class="font-c" font-size="11" font-weight="700">DOMAIN 04</text>
+    <text x="24" y="46" fill="#FFFFFF" class="font-h" font-size="15">DevSecOps &amp; FinOps</text>
+    <text x="24" y="66" fill="#94A3B8" class="font-b" font-size="11">Supply Chain, Policy-as-Code, Secrets &amp; Cloud Cost</text>
+
+    <!-- Tool Chips -->
+    <g transform="translate(300, 20)">
+      <rect x="0" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#f59e0b" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Kyverno &amp; OPA</text>
+      <text x="12" y="27" fill="#FDE68A" class="font-c" font-size="8.5">Policy as Code</text>
+
+      <rect x="155" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#f59e0b" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">HashiCorp Vault</text>
+      <text x="12" y="27" fill="#FDE68A" class="font-c" font-size="8.5">Dynamic Secrets</text>
+
+      <rect x="310" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#1e3a4e" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Trivy &amp; Grype</text>
+      <text x="12" y="27" fill="#FDE68A" class="font-c" font-size="8.5">Vulnerability / CVE</text>
+
+      <rect x="465" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#1e3a4e" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Cosign &amp; Syft</text>
+      <text x="12" y="27" fill="#FDE68A" class="font-c" font-size="8.5">Signing &amp; SBOM</text>
+
+      <rect x="620" y="0" width="145" height="34" rx="6" fill="#0b2436" stroke="#1e3a4e" stroke-width="0.8" />
+      <text x="12" y="16" fill="#FFFFFF" class="font-c" font-size="10.5" font-weight="700">Kubecost &amp; Infracost</text>
+      <text x="12" y="27" fill="#FDE68A" class="font-c" font-size="8.5">Cloud FinOps</text>
+    </g>
+
+    <g transform="translate(300, 62)">
+      <rect x="0" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">External Secrets Operator</text>
+
+      <rect x="155" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Semgrep SAST</text>
+
+      <rect x="310" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Gitleaks Secrets Scan</text>
+
+      <rect x="465" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">Falco Runtime Security</text>
+
+      <rect x="620" y="0" width="145" height="28" rx="5" fill="#071b28" stroke="#132a3e" />
+      <text x="12" y="18" fill="#CBD5E1" class="font-c" font-size="9.5">OpenCost Allocation</text>
+    </g>
+  </g>
+
+</svg>

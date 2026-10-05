@@ -1,0 +1,17 @@
+groups:
+  - name: CorePlatformAlerts
+    rules:
+      - alert: ServiceHighErrorRate
+        expr: |
+          (
+            sum(rate(http_requests_total{status=~"5.."}[5m]))
+            /
+            sum(rate(http_requests_total[5m]))
+          ) * 100 > 1.0
+        for: 2m
+        labels:
+          severity: critical
+          team: platform-sre
+        annotations:
+          summary: "Service HTTP 5xx error rate exceeds 1% over 5m window"
+          runbook_url: "https://wiki.enterprise.io/runbooks/5xx-investigation"

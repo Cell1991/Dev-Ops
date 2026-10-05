@@ -1,0 +1,27 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: core-api-gateway-route
+  namespace: production
+spec:
+  parentRefs:
+    - name: enterprise-edge-gateway
+      namespace: infra-ingress
+      sectionName: https
+  hostnames:
+    - "api.enterprise.io"
+  rules:
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /v1/core
+      filters:
+        - type: RequestHeaderModifier
+          requestHeaderModifier:
+            set:
+              - name: X-Trace-Gateway
+                value: "cilium-envoy-edge"
+      backendRefs:
+        - name: core-api-service
+          port: 8080
+          weight: 100
