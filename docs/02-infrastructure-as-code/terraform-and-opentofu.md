@@ -88,18 +88,18 @@ Terragrunt keeps Terraform code DRY (Don't Repeat Yourself) across multi-account
 
 ```text
 infrastructure/
-├── root.hcl               # Global S3 backend & AWS provider definition
-├── environments/
-│   ├── dev/
-│   │   ├── env.hcl        # environment = "dev"
-│   │   ├── vpc/
-│   │   │   └── terragrunt.hcl
-│   │   └── eks/
-│   │       └── terragrunt.hcl
-│   └── prod/
-│       ├── env.hcl        # environment = "prod"
-│       ├── vpc/
-│       │   └── terragrunt.hcl
-│       └── eks/
-│           └── terragrunt.hcl
+ root.hcl               # Global S3 backend & AWS provider definition
+ environments/
+    dev/
+       env.hcl        # environment = "dev"
+       vpc/
+          terragrunt.hcl
+       eks/
+           terragrunt.hcl
+    prod/
+        env.hcl        # environment = "prod"
+        vpc/
+           terragrunt.hcl
+        eks/
+            terragrunt.hcl
 ```
