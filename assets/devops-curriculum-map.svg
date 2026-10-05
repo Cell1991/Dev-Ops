@@ -1,0 +1,267 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mapBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030a12" />
+      <stop offset="50%" stop-color="#061320" />
+      <stop offset="100%" stop-color="#02060b" />
+    </linearGradient>
+
+    <linearGradient id="gradFnd" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+
+    <linearGradient id="gradInfra" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+
+    <linearGradient id="gradPlatform" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+
+    <linearGradient id="gradSecSre" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+
+    <linearGradient id="gradFinChaos" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+
+    <filter id="glowMap" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <pattern id="gridNet" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#0e2333" stroke-width="0.5" />
+      <circle cx="25" cy="0" r="0.75" fill="#1e3a4e" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseDot {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.3); filter: drop-shadow(0 0 6px #10B981); }
+    }
+    @keyframes lineFlow {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -120; }
+    }
+    .flow-line {
+      stroke-dasharray: 6 8;
+      animation: lineFlow 4s linear infinite;
+    }
+    .flow-fast {
+      stroke-dasharray: 8 10;
+      animation: lineFlow 2.5s linear infinite;
+    }
+    .node-pulse {
+      transform-origin: center;
+      animation: pulseDot 3s ease-in-out infinite;
+    }
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="680" rx="16" fill="url(#mapBg)" stroke="#163347" stroke-width="1.5" />
+  <rect width="1200" height="680" fill="url(#gridNet)" opacity="0.7" />
+
+  <!-- Top Title -->
+  <g transform="translate(40, 36)">
+    <text x="0" y="0" fill="#10B981" class="mono" font-size="12" font-weight="700" letter-spacing="2">05 // TAXONOMIC CURRICULUM ARCHITECTURE</text>
+    <text x="0" y="24" fill="#F8FAFC" class="sans" font-size="20" font-weight="800">12-Track Enterprise DevOps Mastery Learning Pathway</text>
+    <text x="0" y="44" fill="#94A3B8" class="sans" font-size="12">Progressive progression from Linux kernel primitives to multi-cloud Platform Engineering, SRE &amp; FinOps</text>
+  </g>
+
+  <!-- ================= BACKGROUND INTERCONNECTING BUS LINES ================= -->
+  <!-- Level 0 -> Level 1 -->
+  <g stroke="#1e3a4e" stroke-width="2.5" fill="none">
+    <path d="M 230 150 L 320 150" />
+    <path d="M 500 150 L 590 150" />
+    <path d="M 770 150 L 860 150" />
+    <path d="M 1040 150 L 1090 150 L 1090 290 L 1040 290" />
+    
+    <!-- Level 1 -> Level 2 -->
+    <path d="M 860 290 L 770 290" />
+    <path d="M 590 290 L 500 290" />
+    <path d="M 320 290 L 230 290" />
+    <path d="M 140 290 L 90 290 L 90 430 L 140 430" />
+
+    <!-- Level 2 -> Level 3 -->
+    <path d="M 320 430 L 410 430" />
+    <path d="M 590 430 L 680 430" />
+    <path d="M 860 430 L 950 430" />
+    <path d="M 1040 430 L 1090 430 L 1090 570 L 1040 570" />
+
+    <!-- Level 3 final -->
+    <path d="M 860 570 L 770 570" />
+    <path d="M 590 570 L 500 570" />
+  </g>
+
+  <!-- ANIMATED FLOW PULSE LINES -->
+  <g stroke="#10B981" stroke-width="2" fill="none" class="flow-line">
+    <path d="M 230 150 L 320 150" />
+    <path d="M 500 150 L 590 150" />
+    <path d="M 770 150 L 860 150" />
+    <path d="M 1040 150 L 1090 150 L 1090 290 L 1040 290" stroke="#06B6D4" />
+    <path d="M 860 290 L 770 290" stroke="#06B6D4" />
+    <path d="M 590 290 L 500 290" stroke="#3B82F6" />
+    <path d="M 320 290 L 230 290" stroke="#3B82F6" />
+    <path d="M 140 290 L 90 290 L 90 430 L 140 430" stroke="#8B5CF6" />
+    <path d="M 320 430 L 410 430" stroke="#8B5CF6" />
+    <path d="M 590 430 L 680 430" stroke="#EC4899" />
+    <path d="M 860 430 L 950 430" stroke="#EC4899" />
+    <path d="M 1040 430 L 1090 430 L 1090 570 L 1040 570" stroke="#F59E0B" />
+    <path d="M 860 570 L 770 570" stroke="#F59E0B" />
+    <path d="M 590 570 L 500 570" stroke="#10B981" />
+  </g>
+
+  <!-- ================= 12 TRACK NODES ================= -->
+
+  <!-- TIER 1: FOUNDATIONS (Top Row) -->
+  <!-- TRACK 00 -->
+  <g transform="translate(50, 105)">
+    <rect width="180" height="90" rx="10" fill="#071b28" stroke="#10B981" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4.5" fill="#10B981" class="node-pulse" />
+    <text x="28" y="21" fill="#10B981" class="mono" font-size="10" font-weight="700">TRACK 00 // CORE</text>
+    <text x="14" y="44" fill="#FFFFFF" class="sans" font-size="13" font-weight="800">Linux &amp; Shell Int.</text>
+    <text x="14" y="62" fill="#94A3B8" class="mono" font-size="9.5">Namespaces • cgroups</text>
+    <text x="14" y="76" fill="#94A3B8" class="mono" font-size="9.5">POSIX Signals • Strict Bash</text>
+  </g>
+
+  <!-- TRACK 01 -->
+  <g transform="translate(320, 105)">
+    <rect width="180" height="90" rx="10" fill="#071b28" stroke="#10B981" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4.5" fill="#10B981" />
+    <text x="28" y="21" fill="#10B981" class="mono" font-size="10" font-weight="700">TRACK 01 // RUNTIMES</text>
+    <text x="14" y="44" fill="#FFFFFF" class="sans" font-size="13" font-weight="800">OCI Containers</text>
+    <text x="14" y="62" fill="#94A3B8" class="mono" font-size="9.5">Multi-Stage • BuildKit</text>
+    <text x="14" y="76" fill="#94A3B8" class="mono" font-size="9.5">Distroless • Non-Root</text>
+  </g>
+
+  <!-- TRACK 02 -->
+  <g transform="translate(590, 105)">
+    <rect width="180" height="90" rx="10" fill="#071b28" stroke="#06B6D4" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4.5" fill="#06B6D4" />
+    <text x="28" y="21" fill="#06B6D4" class="mono" font-size="10" font-weight="700">TRACK 02 // IAC</text>
+    <text x="14" y="44" fill="#FFFFFF" class="sans" font-size="13" font-weight="800">Terraform &amp; IaC</text>
+    <text x="14" y="62" fill="#94A3B8" class="mono" font-size="9.5">OpenTofu • State Lock</text>
+    <text x="14" y="76" fill="#94A3B8" class="mono" font-size="9.5">Terragrunt • Ansible</text>
+  </g>
+
+  <!-- TRACK 03 -->
+  <g transform="translate(860, 105)">
+    <rect width="180" height="90" rx="10" fill="#071b28" stroke="#06B6D4" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4.5" fill="#06B6D4" />
+    <text x="28" y="21" fill="#06B6D4" class="mono" font-size="10" font-weight="700">TRACK 03 // GITOPS</text>
+    <text x="14" y="44" fill="#FFFFFF" class="sans" font-size="13" font-weight="800">CI/CD &amp; ArgoCD</text>
+    <text x="14" y="62" fill="#94A3B8" class="mono" font-size="9.5">GitHub OIDC • Buildx</text>
+    <text x="14" y="76" fill="#94A3B8" class="mono" font-size="9.5">Argo Rollouts • Canary</text>
+  </g>
+
+  <!-- TIER 2: ORCHESTRATION & PLATFORM (Row 2 - Right to Left) -->
+  <!-- TRACK 04 -->
+  <g transform="translate(860, 245)">
+    <rect width="180" height="90" rx="10" fill="#071b28" stroke="#3B82F6" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4.5" fill="#3B82F6" />
+    <text x="28" y="21" fill="#3B82F6" class="mono" font-size="10" font-weight="700">TRACK 04 // K8S</text>
+    <text x="14" y="44" fill="#FFFFFF" class="sans" font-size="13" font-weight="800">Kubernetes Core</text>
+    <text x="14" y="62" fill="#94A3B8" class="mono" font-size="9.5">Control Plane • etcd</text>
+    <text x="14" y="76" fill="#94A3B8" class="mono" font-size="9.5">Gateway API • PDBs</text>
+  </g>
+
+  <!-- TRACK 05 -->
+  <g transform="translate(590, 245)">
+    <rect width="180" height="90" rx="10" fill="#071b28" stroke="#3B82F6" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4.5" fill="#3B82F6" />
+    <text x="28" y="21" fill="#3B82F6" class="mono" font-size="10" font-weight="700">TRACK 05 // IDP</text>
+    <text x="14" y="44" fill="#FFFFFF" class="sans" font-size="13" font-weight="800">Platform Eng.</text>
+    <text x="14" y="62" fill="#94A3B8" class="mono" font-size="9.5">Backstage Catalogs</text>
+    <text x="14" y="76" fill="#94A3B8" class="mono" font-size="9.5">vCluster Preview Envs</text>
+  </g>
+
+  <!-- TRACK 06 -->
+  <g transform="translate(320, 245)">
+    <rect width="180" height="90" rx="10" fill="#071b28" stroke="#8B5CF6" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4.5" fill="#8B5CF6" />
+    <text x="28" y="21" fill="#8B5CF6" class="mono" font-size="10" font-weight="700">TRACK 06 // MESH</text>
+    <text x="14" y="44" fill="#FFFFFF" class="sans" font-size="13" font-weight="800">Service Mesh &amp; eBPF</text>
+    <text x="14" y="62" fill="#94A3B8" class="mono" font-size="9.5">Cilium CNI • Wireguard</text>
+    <text x="14" y="76" fill="#94A3B8" class="mono" font-size="9.5">Istio Ambient • mTLS</text>
+  </g>
+
+  <!-- TRACK 07 -->
+  <g transform="translate(50, 245)">
+    <rect width="180" height="90" rx="10" fill="#071b28" stroke="#8B5CF6" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4.5" fill="#8B5CF6" />
+    <text x="28" y="21" fill="#8B5CF6" class="mono" font-size="10" font-weight="700">TRACK 07 // OTEL</text>
+    <text x="14" y="44" fill="#FFFFFF" class="sans" font-size="13" font-weight="800">Observability (OTel)</text>
+    <text x="14" y="62" fill="#94A3B8" class="mono" font-size="9.5">OTel Collector • Tempo</text>
+    <text x="14" y="76" fill="#94A3B8" class="mono" font-size="9.5">Prometheus • Grafana</text>
+  </g>
+
+  <!-- TIER 3: SECURITY, SRE & GOVERNANCE (Row 3 - Left to Right) -->
+  <!-- TRACK 08 -->
+  <g transform="translate(50, 385)">
+    <rect width="180" height="90" rx="10" fill="#140f29" stroke="#EC4899" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4.5" fill="#EC4899" />
+    <text x="28" y="21" fill="#EC4899" class="mono" font-size="10" font-weight="700">TRACK 08 // SEC</text>
+    <text x="14" y="44" fill="#FFFFFF" class="sans" font-size="13" font-weight="800">DevSecOps &amp; Policy</text>
+    <text x="14" y="62" fill="#94A3B8" class="mono" font-size="9.5">Kyverno • OPA Gate</text>
+    <text x="14" y="76" fill="#94A3B8" class="mono" font-size="9.5">Syft SBOM • Cosign</text>
+  </g>
+
+  <!-- TRACK 09 -->
+  <g transform="translate(320, 385)">
+    <rect width="180" height="90" rx="10" fill="#140f29" stroke="#EC4899" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4.5" fill="#EC4899" />
+    <text x="28" y="21" fill="#EC4899" class="mono" font-size="10" font-weight="700">TRACK 09 // SRE</text>
+    <text x="14" y="44" fill="#FFFFFF" class="sans" font-size="13" font-weight="800">SRE &amp; Error Budget</text>
+    <text x="14" y="62" fill="#94A3B8" class="mono" font-size="9.5">Multi-Burn SLO Alerts</text>
+    <text x="14" y="76" fill="#94A3B8" class="mono" font-size="9.5">Blameless Post-Mortem</text>
+  </g>
+
+  <!-- TRACK 10 -->
+  <g transform="translate(590, 385)">
+    <rect width="180" height="90" rx="10" fill="#1b1207" stroke="#F59E0B" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4.5" fill="#F59E0B" />
+    <text x="28" y="21" fill="#F59E0B" class="mono" font-size="10" font-weight="700">TRACK 10 // CHAOS</text>
+    <text x="14" y="44" fill="#FFFFFF" class="sans" font-size="13" font-weight="800">Chaos Engineering</text>
+    <text x="14" y="62" fill="#94A3B8" class="mono" font-size="9.5">Chaos Mesh • Litmus</text>
+    <text x="14" y="76" fill="#94A3B8" class="mono" font-size="9.5">Steady-State Asserts</text>
+  </g>
+
+  <!-- TRACK 11 -->
+  <g transform="translate(860, 385)">
+    <rect width="180" height="90" rx="10" fill="#1b1207" stroke="#F59E0B" stroke-width="1.2" />
+    <circle cx="16" cy="18" r="4.5" fill="#F59E0B" />
+    <text x="28" y="21" fill="#F59E0B" class="mono" font-size="10" font-weight="700">TRACK 11 // FINOPS</text>
+    <text x="14" y="44" fill="#FFFFFF" class="sans" font-size="13" font-weight="800">Cloud FinOps</text>
+    <text x="14" y="62" fill="#94A3B8" class="mono" font-size="9.5">Infracost PR Gates</text>
+    <text x="14" y="76" fill="#94A3B8" class="mono" font-size="9.5">Kubecost &amp; Karpenter</text>
+  </g>
+
+  <!-- ================= BOTTOM MASTERY SUMMARY BANNER ================= -->
+  <g transform="translate(50, 520)">
+    <rect width="1100" height="110" rx="12" fill="#051522" stroke="#10B981" stroke-width="1.2" filter="url(#glowMap)" />
+    <circle cx="36" cy="55" r="18" fill="#062533" stroke="#10B981" stroke-width="1.5" />
+    <polygon points="36,44 45,59 27,59" fill="#00FF9D" />
+
+    <text x="75" y="42" fill="#FFFFFF" class="sans" font-size="16" font-weight="800">COMPLETE PRODUCTION READINESS PIPELINE</text>
+    <text x="75" y="62" fill="#6EE7B7" class="mono" font-size="11.5">Zero-Trust Security • 99.999% SLA Resiliency • Cost-Optimized Cloud Architecture</text>
+    <text x="75" y="85" fill="#94A3B8" class="sans" font-size="12">Every track contains verified, production-ready manifests, security policies, and executable automation recipes.</text>
+
+    <!-- Right Live Pill -->
+    <g transform="translate(900, 42)">
+      <rect width="165" height="28" rx="14" fill="#082b3d" stroke="#00FF9D" stroke-width="1" />
+      <circle cx="16" cy="14" r="4.5" fill="#00FF9D" class="node-pulse" />
+      <text x="30" y="18" fill="#00FF9D" class="mono" font-size="10.5" font-weight="700">ENTERPRISE CERTIFIED</text>
+    </g>
+  </g>
+
+</svg>

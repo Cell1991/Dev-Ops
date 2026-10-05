@@ -154,19 +154,6 @@
 
 <br/>
 
-```mermaid
-flowchart LR
-    A["👨‍💻 Developer Commit\n(Trunk / Pre-commit)"] -->|"git push"| B["⚡ GitHub Actions CI\n(Buildx Cache + Go Test)"]
-    B --> C["🛡️ Security & Attest\n(Trivy CVE + Syft SBOM + Cosign)"]
-    C -->|"Push Immutable SHA"| D["📦 OCI Registry\n(GHCR / ECR)"]
-    D --> E["🐙 ArgoCD GitOps\n(Continuous Reconciliation)"]
-    E --> F["☸️ Kubernetes Cluster\n(Kyverno Admission + Cilium)"]
-    F --> G["📊 OpenTelemetry & SRE\n(SLO Metrics + Tempo Traces)"]
-    G -->|"Auto-Rollback Trigger"| E
-```
-
-<br/>
-
 ---
 
 <!-- ========================================================================================= -->
@@ -175,6 +162,8 @@ flowchart LR
 
 <div align="center">
   <img src="./assets/banner_05.svg" width="100%" alt="05 // Comprehensive Curriculum Vault" id="05-comprehensive-curriculum-vault-12-tracks" />
+  <br/><br/>
+  <img src="./assets/devops-curriculum-map.svg" alt="12-Track Enterprise DevOps Curriculum Map" width="100%" />
 </div>
 
 <br/>
