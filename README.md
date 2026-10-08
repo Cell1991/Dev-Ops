@@ -168,8 +168,10 @@
 
 <br/>
 
-### Track 00 // Foundations, Linux Internals &amp; Git
-> Kernel isolation primitives, system calls, cgroups, process signals, defensive shell scripting, and Trunk-Based Development.
+<div align="center">
+  <img src="./assets/sec_00.svg" width="100%" alt="Track 00" />
+</div>
+
 
 | Curriculum Module | Architecture &amp; Verified Manifests |
 | :--- | :--- |
@@ -178,8 +180,10 @@
 
 <br/>
 
-### Track 01 // Containerization &amp; Modern Runtimes
-> OCI image architecture, BuildKit caching, non-root execution, distroless runtimes, and Linux capability stripping.
+<div align="center">
+  <img src="./assets/sec_01.svg" width="100%" alt="Track 01" />
+</div>
+
 
 | Curriculum Module | Architecture &amp; Verified Manifests |
 | :--- | :--- |
@@ -188,8 +192,10 @@
 
 <br/>
 
-### Track 02 // Infrastructure as Code (IaC) &amp; Config Management
-> Declarative cloud provisioning with Terraform / OpenTofu, remote S3 backends with DynamoDB locking, and Ansible automation.
+<div align="center">
+  <img src="./assets/sec_02.svg" width="100%" alt="Track 02" />
+</div>
+
 
 | Curriculum Module | Architecture &amp; Verified Manifests |
 | :--- | :--- |
@@ -198,8 +204,10 @@
 
 <br/>
 
-### Track 03 // Enterprise CI/CD &amp; Progressive Delivery
-> Keyless OIDC cloud authentication, Docker Buildx caching, ArgoCD GitOps reconciliation, and automated canary analysis.
+<div align="center">
+  <img src="./assets/sec_03.svg" width="100%" alt="Track 03" />
+</div>
+
 
 | Curriculum Module | Architecture &amp; Verified Manifests |
 | :--- | :--- |
@@ -208,8 +216,10 @@
 
 <br/>
 
-### Track 04 // Kubernetes Orchestration &amp; Cloud Native Ecosystem
-> Control plane architecture (etcd Raft, API Server, Scheduler), Pod lifecycle probes, PDBs, Helm, and K8s Gateway API.
+<div align="center">
+  <img src="./assets/sec_04.svg" width="100%" alt="Track 04" />
+</div>
+
 
 | Curriculum Module | Architecture &amp; Verified Manifests |
 | :--- | :--- |
@@ -218,8 +228,10 @@
 
 <br/>
 
-### Track 05 // Platform Engineering &amp; Internal Developer Platforms (IDP)
-> Golden paths, Spotify Backstage software catalog, Score specification, and ephemeral PR preview environments with vCluster.
+<div align="center">
+  <img src="./assets/sec_05.svg" width="100%" alt="Track 05" />
+</div>
+
 
 | Curriculum Module | Architecture &amp; Verified Manifests |
 | :--- | :--- |
@@ -228,8 +240,10 @@
 
 <br/>
 
-### Track 06 // Service Mesh, eBPF &amp; Cloud Networking
-> High-performance eBPF data planes, Cilium CNI, Istio Ambient mesh (ztunnel &amp; waypoint), and zero-trust L7 network policies.
+<div align="center">
+  <img src="./assets/sec_06.svg" width="100%" alt="Track 06" />
+</div>
+
 
 | Curriculum Module | Architecture &amp; Verified Manifests |
 | :--- | :--- |
@@ -238,8 +252,10 @@
 
 <br/>
 
-### Track 07 // Observability, OpenTelemetry &amp; SRE Metrics
-> OpenTelemetry Collector architecture, W3C tracecontext, Prometheus TSDB, Grafana dashboards, and multi-burn-rate SLO alerts.
+<div align="center">
+  <img src="./assets/sec_07.svg" width="100%" alt="Track 07" />
+</div>
+
 
 | Curriculum Module | Architecture &amp; Verified Manifests |
 | :--- | :--- |
@@ -248,8 +264,10 @@
 
 <br/>
 
-### Track 08 // DevSecOps, Policy as Code &amp; Supply Chain
-> Kubernetes admission control, Kyverno validation, Syft SBOM generation, and Cosign keyless container signing via Sigstore.
+<div align="center">
+  <img src="./assets/sec_08.svg" width="100%" alt="Track 08" />
+</div>
+
 
 | Curriculum Module | Architecture &amp; Verified Manifests |
 | :--- | :--- |
@@ -258,8 +276,10 @@
 
 <br/>
 
-### Track 09 // SRE Principles, Error Budgets &amp; Post-Mortems
-> Mathematical error budgets ($1 - \text{SLO}$), deployment freeze gates, blameless post-mortem RCA, and interactive runbooks.
+<div align="center">
+  <img src="./assets/sec_09.svg" width="100%" alt="Track 09" />
+</div>
+
 
 | Curriculum Module | Architecture &amp; Verified Manifests |
 | :--- | :--- |
@@ -268,8 +288,10 @@
 
 <br/>
 
-### Track 10 // Chaos Engineering &amp; Resiliency
-> Principles of chaos experimentation, steady-state hypothesis formulation, Chaos Mesh CRDs, and network partition simulations.
+<div align="center">
+  <img src="./assets/sec_10.svg" width="100%" alt="Track 10" />
+</div>
+
 
 | Curriculum Module | Architecture &amp; Verified Manifests |
 | :--- | :--- |
@@ -277,8 +299,10 @@
 
 <br/>
 
-### Track 11 // Cloud FinOps &amp; Cost Governance
-> FinOps Framework (Inform, Optimize, Operate), Infracost PR cost estimations, Kubecost allocation, and Karpenter JIT scaling.
+<div align="center">
+  <img src="./assets/sec_11.svg" width="100%" alt="Track 11" />
+</div>
+
 
 | Curriculum Module | Architecture &amp; Verified Manifests |
 | :--- | :--- |
