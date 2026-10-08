@@ -5,14 +5,14 @@
 <div align="center">
 
   <!-- High-Resolution Cyber-Titanium Animated SVG Banner -->
-  <a href="https://github.com/Cell1991/Dev-Ops">
+  <a href="https://github.com/Cell1991/Dev-Ops-book">
     <img src="./assets/hero-banner.svg" alt="DevOps Compendium Hero Banner" width="100%" />
   </a>
 
   <br/><br/>
 
   <!-- Responsive Terminal Typing Stream -->
-  <a href="https://github.com/Cell1991/Dev-Ops">
+  <a href="https://github.com/Cell1991/Dev-Ops-book">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=15&pause=1200&color=10B981&center=true&vCenter=true&width=750&height=40&lines=%24+devops.init()+--curriculum+%22Foundations+to+Advanced+SRE%22;%24+iac.provision()+--engine+%22Terraform+%2B+OpenTofu%22;%24+gitops.sync()+--reconciler+%22ArgoCD+%2B+Argo+Rollouts%22;%24+mesh.enforce()+--layer+%22Cilium+eBPF+%2B+Ambient+mTLS%22;%24+telemetry.export()+--collector+%22OpenTelemetry+%2B+Tempo%22;%24+supplychain.attest()+--standard+%22SLSA+L3+%2B+Cosign+Keyless%22" width="100%" alt="Terminal Typing" />
   </a>
 
@@ -394,7 +394,7 @@ trivy image --config examples/security/trivy-config.yaml ghcr.io/enterprise/micr
 <!-- ========================================================================================= -->
 
 <div align="center">
-  <a href="https://github.com/Cell1991/Dev-Ops">
+  <a href="https://github.com/Cell1991/Dev-Ops-book">
     <img src="./assets/footer.svg" alt="DevOps Compendium Footer" width="100%" />
   </a>
 </div>\n
